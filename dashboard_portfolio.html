@@ -1,0 +1,4250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Portfólio | Emissário Leão Dourado — Viana &amp; Moura</title>
+  <script>
+
+    // ═══════════════════════════════════════════════════
+    // DADOS ESTÁTICOS (PORTFOLIO) - Gerado em 30/04/2026
+    // ═══════════════════════════════════════════════════
+    const STATIC_DB = { "actuals": { "2026-03-05": { "T1_RPA": 112 }, "2026-03-09": { "T1_RPA": 68, "T1_ESC": 47.88, "T1_ATU": 30, "T1_RVA": 30, "T1_REA": 27 }, "2026-03-10": { "T1_ATU": 6, "T1_RVA": 6, "T1_DRO": 4.8, "T1_ESC": -51.4, "T1_RPA": 71.9, "T1_REA": -53.3 }, "2026-03-21": { "T1_RVA": 12, "T1_REA": 30.69, "T1_ATU": 12, "T1_DRO": 5.2, "T1_RPA": 34, "T1_ESC": 24 }, "2026-03-11": { "T1_DRO": 5, "T1_ESC": 25.2, "T1_REA": 27.9, "T1_ATU": 30, "T1_RVA": 30, "T1_LDE": 5, "T1_RPA": -78 }, "2026-03-12": { "T1_RPA": 82, "T1_ESC": 20.16, "T1_DRO": 5, "T1_LDE": 5, "T1_REA": 7.56, "T1_ATU": 12, "T1_RVA": 12 }, "2026-03-13": { "T1_ESC": 20.16, "T1_DRO": 5, "T1_LDE": 5, "T1_REA": 5.58, "T1_ATU": 6, "T1_RVA": 6, "T1_IPV": 1 }, "2026-03-17": { "T1_RPA": 107, "T1_ATU": 24, "T1_RVA": 24, "T1_ESC": 12.6, "T1_DRO": 0.9 }, "2026-03-18": { "T1_ATU": 12, "T1_REA": 16.74, "T1_RVA": 12, "T1_ESC": 27.72, "T1_DRO": 1.5 }, "2026-03-16": { "T1_ATU": 6, "T1_RVA": 6, "T1_ESC": 34.02, "T1_DRO": 0.94, "T1_LDE": 0.94, "T2_RPA": -408, "T2_ESC": -75.9 }, "2026-03-19": { "T1_REA": 20.46, "T1_ESC": 25.2, "T1_LDE": 1.5, "T1_IPV": 1 }, "2026-03-20": { "T1_RVA": 42, "T1_REA": 16.74, "T1_ATU": 42, "T1_ESC": 15.12, "T1_DRO": 3.2, "T1_LDE": 3.2 }, "2026-03-23": { "T1_RPA": 112, "T1_IPV": 1 }, "2026-03-24": { "T1_DRO": 14 }, "2026-03-25": { "T1_RPA": 24, "T1_ATU": 24, "T1_ESC": 28.98, "T1_DRO": 9.6 }, "2026-03-28": { "T1_ATU": 30, "T1_REA": 68.8, "T1_ESC": 58, "T1_DRO": 3 }, "2026-03-30": { "T1_RPA": 20, "T1_DRO": 3.6 }, "2026-03-31": { "T2_RPA": 55.2, "T1_ATU": 24, "T1_REA": 22.32 }, "2026-03-26": { "T1_RPA": 58, "T1_ATU": 36, "T1_ESC": 35.28, "T1_DRO": 6.72, "T1_IPV": 1 }, "2026-03-27": { "T1_RPA": 110, "T1_ATU": 12, "T1_REA": 33.48, "T1_ESC": 26, "T1_DRO": 19.2 }, "2026-04-01": { "T1_ATU": 12, "T1_REPAS": -70, "T2_RPA": 94.3, "T1_RPA": -502.9, "T1_ESC": 41.6 }, "2026-04-02": { "T1_REA": 70, "T1_REPAS": 70, "T1_DRO": 3.6 }, "2026-04-06": { "T1_RPA": 30, "T1_DRO": 1.5, "T1_REPAS": 50, "T2_ESC": 35.28 }, "2026-04-07": { "T2_ESC": 16, "T2_ATU": 36, "T1_RPA": 40, "T1_ATU": 36 }, "2026-04-29": { "T3_REPAS": 42, "T2_ATU": 3, "T1_REPAS": 10 }, "2026-04-08": { "T1_REA": 37.6, "T1_ESC": 31.5, "T1_ATU": 18, "T1_DRO": 1.5, "T1_IPV": 1, "T1_REPAS": 132.5, "T2_ATU": 12, "T1_RPA": 256 }, "2026-04-09": { "T2_ESC": 25, "T2_ATU": 20, "T1_ATU": 30, "T1_REPAS": 117.5 }, "2026-04-10": { "T1_REA": 40.45, "T1_REPAS": 41.4, "T2_RPA": 194, "T2_REA": 46.5, "T2_ESC": 45.36 }, "2026-04-11": { "T2_REA": 11.16, "T2_ESC": 30.24, "T2_ATU": 12, "T2_DRO": 8.64 }, "2026-04-13": { "T2_REA": 22.32, "T2_ESC": 37.8, "T2_ATU": 30 }, "2026-04-14": { "T2_REA": 16.7, "T2_ESC": 53, "T2_ATU": 18, "T1_ATU": -2, "T1_REPAS": 125 }, "2026-04-15": { "T2_REA": 22.32, "T2_ESC": 30.24, "T2_ATU": 48, "T2_DRO": 10.5, "T1_RPA": 256, "T2_RPA": 472.5 }, "2026-04-16": { "T1_REPAS": 133, "T2_ESC": 63, "T2_ATU": 18, "T3_RPA": 125, "T2_IPV": 1, "T2_DRO": 6 }, "2026-04-17": { "T3_REA": 22.32, "T3_ATU": 24, "T1_REPAS": 105, "T2_ATU": 6 }, "2026-04-18": { "T2_REA": 16.74, "T2_ATU": 12 }, "2026-04-22": { "T2_ATU": 15, "T3_ATU": 18, "T3_IPV": 1 }, "2026-04-23": { "T2_ATU": 6, "T3_ATU": 12, "T2_IPV": 1, "T1_REA": 120.3 }, "2026-03-02": { "T1_REPAS": -354.4 }, "2026-04-24": { "T1_REA": -120.3, "T2_REA": 120.4, "T1_REPAS": 40, "T2_REPAS": 100, "T2_ATU": 5, "T3_REA": 37.7, "T3_ATU": 4 }, "2026-04-25": { "T2_IPV": 1, "T3_ATU": 5, "T3_REA": 3 }, "2026-04-27": { "T3_REPAS": 21 }, "2026-04-30": { "T2_REPAS": 141 } }, "trechos": [{ "id": 1, "nome": "Trecho 1", "cor": "#8B1A1A", "inicio": "2026-03-05", "fim": "2026-04-24", "atividades": [{ "id": "T1_RPA", "nome": "Rem. Pavimento Asfáltico", "un": "m²", "total": 800, "ini": "2026-03-05", "fim": "2026-03-27", "plano": { "2026-03-05": 112, "2026-03-09": 68, "2026-03-10": 72, "2026-03-12": 82, "2026-03-17": 107, "2026-03-21": 34, "2026-03-23": 65, "2026-03-24": 65, "2026-03-25": 65, "2026-03-26": 65, "2026-03-27": 65 } }, { "id": "T1_ESC", "nome": "Escavação", "un": "m³", "total": 422, "ini": "2026-03-09", "fim": "2026-03-28", "plano": { "2026-03-09": 48, "2026-03-10": 42, "2026-03-11": 25, "2026-03-12": 20, "2026-03-13": 20, "2026-03-16": 34, "2026-03-17": 13, "2026-03-18": 28, "2026-03-19": 25, "2026-03-20": 15, "2026-03-21": 24, "2026-03-24": 25.6, "2026-03-25": 25.6, "2026-03-26": 25.6, "2026-03-27": 25.6, "2026-03-28": 25.6 } }, { "id": "T1_ATU", "nome": "Assentamento de Tubulação", "un": "m", "total": 400, "ini": "2026-03-09", "fim": "2026-04-09", "plano": { "2026-03-09": 30, "2026-03-10": 6, "2026-03-11": 30, "2026-03-12": 12, "2026-03-13": 6, "2026-03-16": 6, "2026-03-17": 24, "2026-03-18": 12, "2026-03-20": 42, "2026-03-21": 12, "2026-03-24": 17, "2026-03-25": 17, "2026-03-26": 17, "2026-03-27": 17, "2026-03-28": 17, "2026-03-30": 17, "2026-03-31": 17, "2026-04-01": 17, "2026-04-02": 17, "2026-04-07": 36, "2026-04-08": 18, "2026-04-09": 13 } }, { "id": "T1_REA", "nome": "Reaterro Compactado", "un": "m³", "total": 372, "ini": "2026-03-09", "fim": "2026-04-10", "plano": { "2026-03-09": 27, "2026-03-11": 28, "2026-03-12": 8, "2026-03-13": 6, "2026-03-18": 17, "2026-03-19": 20, "2026-03-20": 17, "2026-03-21": 31, "2026-03-23": 14, "2026-03-24": 14, "2026-03-25": 14, "2026-03-26": 14, "2026-03-27": 14, "2026-03-28": 14, "2026-03-30": 14, "2026-03-31": 15, "2026-04-01": 15, "2026-04-02": 15, "2026-04-06": 15, "2026-04-07": 15, "2026-04-08": 15, "2026-04-09": 15, "2026-04-10": 15 } }, { "id": "T1_DRO", "nome": "Desmonte de Rocha", "un": "m³", "total": 63.3, "ini": "2026-03-10", "fim": "2026-04-07", "plano": { "2026-03-10": 4.8, "2026-03-11": 5, "2026-03-12": 5, "2026-03-13": 5, "2026-03-16": 1, "2026-03-17": 1, "2026-03-18": 2, "2026-03-20": 3, "2026-03-21": 5, "2026-03-23": 3, "2026-03-24": 2, "2026-03-25": 3, "2026-03-26": 2, "2026-03-27": 3, "2026-03-28": 2, "2026-03-30": 3, "2026-03-31": 2, "2026-04-01": 3, "2026-04-02": 2, "2026-04-06": 2, "2026-04-07": 4.5 } }, { "id": "T1_IPV", "nome": "Implantação de PV", "un": "und", "total": 5, "ini": "2026-03-13", "fim": "2026-04-09", "plano": { "2026-03-13": 1, "2026-03-19": 1, "2026-03-24": 1, "2026-04-01": 1, "2026-04-09": 1 } }, { "id": "T1_REPAS", "nome": "Reposição Pav. Asfáltico", "un": "m", "total": 400, "ini": "2026-04-06", "fim": "2026-04-24", "plano": { "2026-04-06": 50, "2026-04-08": 132.5, "2026-04-09": 117.5, "2026-04-10": 50, "2026-04-24": 50 } }] }, { "id": 2, "nome": "Trecho 2", "cor": "#6d1414", "inicio": "2026-03-31", "fim": "2026-04-30", "atividades": [{ "id": "T2_RPA", "nome": "Rem. Pavimento Asfáltico", "un": "m²", "total": 408, "ini": "2026-03-31", "fim": "2026-04-10", "plano": { "2026-03-31": 68, "2026-04-01": 68, "2026-04-02": 68, "2026-04-08": 68, "2026-04-09": 68, "2026-04-10": 68 } }, { "id": "T2_IPV", "nome": "Implantação de PV", "un": "und", "total": 3, "ini": "2026-04-06", "fim": "2026-04-17", "plano": { "2026-04-06": 1, "2026-04-11": 1, "2026-04-17": 1 } }, { "id": "T2_ESC", "nome": "Escavação", "un": "m³", "total": 259.6, "ini": "2026-04-06", "fim": "2026-04-16", "plano": { "2026-04-06": 26, "2026-04-07": 26, "2026-04-08": 26, "2026-04-09": 26, "2026-04-10": 26, "2026-04-11": 26, "2026-04-13": 25.6, "2026-04-14": 26, "2026-04-15": 26, "2026-04-16": 26 } }, { "id": "T2_REA", "nome": "Reaterro Compactado", "un": "m³", "total": 256, "ini": "2026-04-06", "fim": "2026-04-24", "plano": { "2026-04-06": 16, "2026-04-07": 16, "2026-04-08": 16, "2026-04-09": 16, "2026-04-10": 16, "2026-04-11": 16, "2026-04-13": 16, "2026-04-14": 16, "2026-04-15": 16, "2026-04-16": 16, "2026-04-17": 16, "2026-04-18": 16, "2026-04-22": 16, "2026-04-23": 16, "2026-04-24": 32 } }, { "id": "T2_ATU", "nome": "Assentamento de Tubulação", "un": "m", "total": 238, "ini": "2026-04-07", "fim": "2026-04-17", "plano": { "2026-04-07": 24, "2026-04-08": 18, "2026-04-09": 24, "2026-04-10": 24, "2026-04-11": 24, "2026-04-13": 24, "2026-04-14": 24, "2026-04-15": 24, "2026-04-16": 24, "2026-04-17": 28 } }, { "id": "T2_DRO", "nome": "Desmonte de Rocha", "un": "m³", "total": 19.78, "ini": "2026-04-08", "fim": "2026-04-15", "plano": { "2026-04-08": 2, "2026-04-09": 3.94, "2026-04-10": 2, "2026-04-11": 3.94, "2026-04-13": 2, "2026-04-14": 3.9, "2026-04-15": 2 } }, { "id": "T2_REPAS", "nome": "Reposição Pav. Asfáltico", "un": "m", "total": 238, "ini": "2026-04-24", "fim": "2026-04-30", "plano": { "2026-04-24": 119, "2026-04-30": 119 } }] }, { "id": 3, "nome": "Trecho 3", "cor": "#5e1010", "inicio": "2026-04-17", "fim": "2026-04-29", "atividades": [{ "id": "T3_RPA", "nome": "Rem. Pavimento Asfáltico", "un": "m²", "total": 63, "ini": "2026-04-17", "fim": "2026-04-22", "plano": { "2026-04-17": 24, "2026-04-18": 19.5, "2026-04-22": 19.5 } }, { "id": "T3_ATU", "nome": "Assentamento de Tubulação", "un": "m", "total": 63, "ini": "2026-04-17", "fim": "2026-04-18", "plano": { "2026-04-17": 30, "2026-04-18": 33 } }, { "id": "T3_REA", "nome": "Reaterro Compactado", "un": "m³", "total": 63, "ini": "2026-04-17", "fim": "2026-04-22", "plano": { "2026-04-17": 18, "2026-04-18": 22.5, "2026-04-22": 22.5 } }, { "id": "T3_IPV", "nome": "Implantação de PV", "un": "und", "total": 1, "ini": "2026-04-18", "fim": "2026-04-18", "plano": { "2026-04-18": 1 } }, { "id": "T3_REPAS", "nome": "Reposição Pav. Asfáltico", "un": "m", "total": 63, "ini": "2026-04-27", "fim": "2026-04-29", "plano": { "2026-04-27": 21, "2026-04-29": 42 } }] }], "diarios": [{ "data": "2026-03-12", "texto": "Registro de incidência de rocha no trecho, tendo que ser desmontada com compressor e massa expansiva." }, { "data": "2026-04-30", "texto": "Foi finalizada toda a reposição asfáltica do trecho. Foi executado 141 m de reposição asfáltica no dia de hoje. Totalizando a finalização do emissário da Leão Dourado." }], "hhData": [] };
+
+    /* KILL SERVICE WORKERS */
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(registrations => {
+        for (let registration of registrations) {
+          registration.unregister();
+        }
+      });
+    }
+
+    function openAnalyzeModal() {
+      const analysisText = `🤖 _Análise gerada automaticamente por modelo de linguagem (Gemini 2.5 Pro — Google DeepMind)._
+
+📌 *O que é o Resumo Inteligente?*
+O Resumo Inteligente é uma funcionalidade que processa automaticamente os diários de obra registrados pela equipe durante a semana e utiliza inteligência artificial para sintetizar os principais eventos, produção e ocorrências em formato de mensagem para WhatsApp — enviando o status da obra de forma rápida e objetiva.
+
+🏗️ *Análise Final da Obra — Semana 8 (27/04 a 30/04/2026):*
+A semana final da obra foi marcada pela conclusão integral da reposição asfáltica em todos os três trechos. Em 30/04/2026, foram executados 141 m de reposição asfáltica no Trecho 2, encerrando as atividades de campo do Emissário Leão Dourado. O projeto atingiu 102,5% de avanço físico médio, superando o planejado de 100,0%, com IDP Global de 1,03 — indicando execução adiantada em relação ao cronograma de referência.
+
+✅ *Destaques positivos:*
+• Todos os trechos (T1, T2 e T3) concluídos dentro do prazo contratual (30/04/2026);
+• Assentamento total de 701m de tubulação concluído 100,4%;
+• Reposição asfáltica integral de 701m² executada com sucesso;
+• Principal ocorrência gerenciada: desmonte de rocha no Trecho 1 (março/2026), com uso de massa expansiva e compressor, sem impacto no prazo final.
+
+_Análise gerada em 30/04/2026 · Emissário Leão Dourado · Viana &amp; Moura Construções._`
+        .replace(/\*(.*?)\*/g, '<strong>$1</strong>')
+        .replace(/_(.*?)_/g, '<em>$1</em>')
+        .replace(/🤖|📌|🏗️|✅/g, s => `<span style="font-size:1.2em">${s}</span>`);
+
+      // Reutilizar o modal de análise existente ou criar um inline
+      let modal = document.getElementById('analyzeModalStatic');
+      if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'analyzeModalStatic';
+        modal.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:3000;display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)';
+        modal.innerHTML = `<div style="background:#fff;border-radius:16px;width:100%;max-width:520px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,0.3);animation:popIn 0.3s ease">
+      <div style="background:#8B1A1A;color:#fff;padding:18px 20px;display:flex;justify-content:space-between;align-items:center">
+        <div style="font-weight:700;font-size:1rem">🤖 Análise Inteligente da Obra</div>
+        <button onclick="document.getElementById('analyzeModalStatic').remove()" style="background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;line-height:1">×</button>
+      </div>
+      <div style="padding:20px;max-height:70vh;overflow-y:auto;font-size:0.85rem;line-height:1.6;color:#3d1a1a;font-family:'Crimson Pro',Georgia,serif">
+        <div style="background:#f9f3e8;border:1px solid #E8A020;border-radius:8px;padding:12px;margin-bottom:12px;font-size:0.78rem;color:#7a5a00">
+          ⚡ Esta análise foi gerada por <strong>Gemini 2.5 Pro (Google DeepMind)</strong> com base nos dados reais registrados no sistema de controle de obras.
+        </div>
+        ${analysisText}
+      </div>
+    </div>`;
+        document.body.appendChild(modal);
+        modal.addEventListener('click', e => { if (e.target === modal) modal.remove(); });
+      } else {
+        modal.remove();
+      }
+    }
+  </script>
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="shortcut icon" href="logo.png">
+  <meta name="theme-color" content="#8B1A1A">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Emissário LD">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <meta name="description" content="Controle de obra do Emissário Leão Dourado — Viana &amp; Moura Construções">
+  <!-- html2pdf.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Barlow+Condensed:wght@700;800;900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --vmc-red: #8B1A1A;
+      --vmc-red-l: #a82020;
+      --vmc-ink: #8B1A1A;
+      --vmc-ink-l: #a82020;
+      --vmc-ink-d: #6a1212;
+      --vmc-gold: #E8A020;
+      --vmc-gold-l: #f0b840;
+      --vmc-bg: #EDEAE3;
+      --vmc-bg2: #F8F7F4;
+      --vmc-card: #FFFFFF;
+      --vmc-border: #DDD9D0;
+      --vmc-dark: #1E2740;
+      --vmc-gray: #6b7280;
+      --vmc-gray-l: #9ca3af;
+      --green: #15803d;
+      --orange: #c2410c;
+      --red-a: #b91c1c;
+      --sh: 0 1px 4px rgba(0, 0, 0, .07), 0 4px 12px rgba(0, 0, 0, .05);
+      --sh-lg: 0 4px 20px rgba(0, 0, 0, .11);
+      --r: 14px;
+      --rs: 9px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent
+    }
+
+    html {
+      font-size: 15px
+    }
+
+    body {
+      font-family: 'Crimson Pro', Georgia, serif;
+      background: var(--vmc-bg);
+      color: var(--vmc-dark);
+      min-height: 100vh;
+      padding-bottom: 76px
+    }
+
+    /* HEADER */
+    .hdr {
+      background: var(--vmc-ink);
+      color: #fff;
+      padding: 14px 18px 10px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--sh-lg)
+    }
+
+    .hdr-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center
+    }
+
+    .hdr-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px
+    }
+
+    .hdr-logo span {
+      color: var(--vmc-gold)
+    }
+
+    .hdr-sub {
+      font-size: .63rem;
+      opacity: .6;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      margin-top: 2px
+    }
+
+    .hdr-right {
+      text-align: right
+    }
+
+    .hdr-date {
+      font-size: .72rem;
+      opacity: .65
+    }
+
+    .hdr-week {
+      font-family: 'Playfair Display', serif;
+      font-size: .82rem;
+      color: var(--vmc-gold);
+      margin-top: 2px
+    }
+
+    /* BOTTOM NAV */
+    .bnav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--vmc-ink);
+      display: flex;
+      z-index: 100;
+      box-shadow: 0 -2px 14px rgba(0, 0, 0, .18)
+    }
+
+    .bn {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 4px 6px;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: rgba(255, 255, 255, .38);
+      font-family: 'Crimson Pro', serif;
+      font-size: .6rem;
+      transition: all .2s;
+      text-align: center
+    }
+
+    .bn.act {
+      color: var(--vmc-gold)
+    }
+
+    .bn.act .bn-icon {
+      filter: none
+    }
+
+    .bn-icon {
+      font-size: 1.25rem;
+      margin-bottom: 2px
+    }
+
+    /* SCREENS */
+    .scr {
+      display: none;
+      padding: 14px;
+      max-width: 900px;
+      margin: 0 auto
+    }
+
+    .scr.act {
+      display: block
+    }
+
+    /* CARDS & SECTION */
+    .card {
+      background: var(--vmc-card);
+      border-radius: var(--r);
+      padding: 15px;
+      box-shadow: var(--sh);
+      margin-bottom: 10px
+    }
+
+    .sec-title {
+      font-family: 'Playfair Display', serif;
+      font-size: .95rem;
+      color: var(--vmc-ink);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--vmc-bg)
+    }
+
+    /* OVERALL PROGRESS — card branco com acento */
+    .ov-card {
+      background: var(--vmc-card);
+      border-radius: var(--r);
+      padding: 20px;
+      margin-bottom: 10px;
+      box-shadow: var(--sh-lg);
+      border-top: 4px solid var(--vmc-ink);
+      position: relative;
+      overflow: hidden
+    }
+
+    .ov-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 90px;
+      height: 90px;
+      background: var(--vmc-gold);
+      opacity: .07;
+      border-radius: 0 0 0 90px
+    }
+
+    .ov-label {
+      font-size: .65rem;
+      opacity: .6;
+      text-transform: uppercase;
+      letter-spacing: .9px;
+      color: var(--vmc-dark)
+    }
+
+    .ov-pct {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 1;
+      margin: 4px 0 2px;
+      color: var(--vmc-ink)
+    }
+
+    .ov-detail {
+      font-size: .78rem;
+      color: var(--vmc-gray);
+      margin-bottom: 10px
+    }
+
+    .pw {
+      background: var(--vmc-bg);
+      border-radius: 100px;
+      height: 9px;
+      overflow: hidden;
+      margin: 8px 0
+    }
+
+    .pb {
+      height: 100%;
+      border-radius: 100px;
+      transition: width .7s ease
+    }
+
+    .pb.w {
+      background: var(--vmc-ink)
+    }
+
+    .pb.g {
+      background: var(--green)
+    }
+
+    .pb.o {
+      background: var(--orange)
+    }
+
+    .pb.r {
+      background: var(--vmc-red)
+    }
+
+    .pb.rv {
+      background: var(--vmc-red)
+    }
+
+    .pb.pl {
+      background: #94a3b8
+    }
+
+    /* CHIPS */
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: .72rem;
+      font-weight: 600;
+      margin-top: 4px
+    }
+
+    .chip.ok {
+      background: #dcfce7;
+      color: #15803d
+    }
+
+    .chip.warn {
+      background: #fef9c3;
+      color: #854d0e
+    }
+
+    .chip.bad {
+      background: #fee2e2;
+      color: #991b1b
+    }
+
+    /* KPI GRID */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 9px;
+      margin-bottom: 10px
+    }
+
+    .kpi {
+      background: var(--vmc-card);
+      border-radius: var(--rs);
+      padding: 14px 13px;
+      text-align: center;
+      box-shadow: var(--sh);
+      border-bottom: 3px solid var(--vmc-bg)
+    }
+
+    .kpi-lb {
+      font-size: .62rem;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      color: var(--vmc-gray-l);
+      margin-bottom: 6px
+    }
+
+    .kpi-v {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--vmc-ink)
+    }
+
+    .kpi-u {
+      font-size: .67rem;
+      color: var(--vmc-gray);
+      margin-top: 4px
+    }
+
+    .kpi-v.g {
+      color: var(--green)
+    }
+
+    .kpi-v.o {
+      color: var(--orange)
+    }
+
+    .kpi-v.r {
+      color: var(--vmc-red)
+    }
+
+    /* ALERTS */
+    .alert {
+      border-radius: var(--rs);
+      padding: 12px 14px;
+      margin-bottom: 9px;
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      border: 1px solid transparent
+    }
+
+    .alert.dan {
+      background: #fff5f5;
+      border-color: #fecaca;
+      color: #7f1d1d
+    }
+
+    .alert.wrn {
+      background: #fffbeb;
+      border-color: #fde68a;
+      color: #78350f
+    }
+
+    .alert.suc {
+      background: #f0fdf4;
+      border-color: #bbf7d0;
+      color: #14532d
+    }
+
+    .alert-ico {
+      font-size: 1.15rem;
+      flex-shrink: 0;
+      margin-top: 1px
+    }
+
+    .alert-t {
+      font-weight: 600;
+      font-size: .88rem;
+      margin-bottom: 3px
+    }
+
+    .alert-b {
+      font-size: .8rem;
+      line-height: 1.5
+    }
+
+    /* TRECHO CARDS */
+    .tc {
+      background: var(--vmc-card);
+      border-radius: var(--r);
+      padding: 15px;
+      margin-bottom: 9px;
+      box-shadow: var(--sh);
+      border-left: 3px solid var(--vmc-ink)
+    }
+
+    .tc-hdr {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px
+    }
+
+    .tc-name {
+      font-family: 'Playfair Display', serif;
+      font-size: .95rem;
+      color: var(--vmc-ink)
+    }
+
+    .tc-meta {
+      font-size: .7rem;
+      color: var(--vmc-gray);
+      margin-top: 3px;
+      display: flex;
+      gap: 10px
+    }
+
+    .idp-badge {
+      padding: 4px 11px;
+      border-radius: 100px;
+      font-size: .73rem;
+      font-weight: 700;
+      font-family: 'Playfair Display', serif
+    }
+
+    .idp-badge.g {
+      background: #dcfce7;
+      color: #15803d
+    }
+
+    .idp-badge.o {
+      background: #fef3c7;
+      color: #92400e
+    }
+
+    .idp-badge.r {
+      background: #fee2e2;
+      color: #991b1b
+    }
+
+    /* PW2 - Barra de Fundo das Atividades */
+    .pw2 {
+      background: rgba(0, 0, 0, 0.08);
+      border-radius: 100px;
+      height: 7px;
+      overflow: hidden;
+      margin: 4px 0
+    }
+
+    /* LANÇAR */
+    .date-sel {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--vmc-card);
+      border-radius: var(--rs);
+      padding: 12px 15px;
+      margin-bottom: 11px;
+      box-shadow: var(--sh);
+      border: 1px solid var(--vmc-border)
+    }
+
+    .di {
+      border: none;
+      background: none;
+      font-family: 'Crimson Pro', serif;
+      font-size: .95rem;
+      flex: 1;
+      outline: none;
+      color: var(--vmc-dark)
+    }
+
+    .t-tabs {
+      display: flex;
+      gap: 7px;
+      margin-bottom: 11px
+    }
+
+    .t-tab {
+      flex: 1;
+      padding: 9px 8px;
+      border-radius: var(--rs);
+      border: 1.5px solid var(--vmc-border);
+      background: var(--vmc-card);
+      font-family: 'Crimson Pro', serif;
+      font-size: .82rem;
+      cursor: pointer;
+      text-align: center;
+      transition: all .2s;
+      color: var(--vmc-gray)
+    }
+
+    .t-tab.act {
+      background: var(--vmc-ink);
+      color: #fff;
+      border-color: var(--vmc-ink)
+    }
+
+    .act-item {
+      background: var(--vmc-card);
+      border-radius: var(--rs);
+      padding: 14px;
+      margin-bottom: 8px;
+      box-shadow: var(--sh);
+      border: 1px solid var(--vmc-border)
+    }
+
+    .act-hdr {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 8px
+    }
+
+    .act-name {
+      font-size: .88rem;
+      font-weight: 500;
+      flex: 1;
+      padding-right: 10px;
+      line-height: 1.35;
+      color: var(--vmc-dark)
+    }
+
+    .plan-td {
+      font-size: .72rem;
+      color: var(--vmc-gray);
+      text-align: right;
+      line-height: 1.5
+    }
+
+    .plan-td strong {
+      color: var(--vmc-red);
+      font-family: 'Playfair Display', serif;
+      font-size: .92rem
+    }
+
+    .inp-row {
+      display: flex;
+      align-items: center;
+      gap: 9px
+    }
+
+    .qi {
+      flex: 1;
+      padding: 10px 13px;
+      border: 1.5px solid var(--vmc-border);
+      border-radius: var(--rs);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      text-align: center;
+      outline: none;
+      transition: border-color .2s;
+      background: var(--vmc-bg2)
+    }
+
+    .qi:focus {
+      border-color: var(--vmc-ink);
+      background: #fff
+    }
+
+    .ul {
+      font-size: .75rem;
+      color: var(--vmc-gray);
+      min-width: 28px
+    }
+
+    .save-btn {
+      width: 100%;
+      padding: 15px;
+      background: var(--vmc-ink);
+      color: #fff;
+      border: none;
+      border-radius: var(--r);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      cursor: pointer;
+      margin-top: 14px;
+      transition: all .2s;
+      box-shadow: 0 4px 14px rgba(30, 39, 64, .25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px
+    }
+
+    .save-btn:active {
+      transform: scale(.98);
+      background: var(--vmc-ink-d)
+    }
+
+    /* GANTT */
+    .gantt-wrap {
+      background: var(--vmc-card);
+      border-radius: var(--r);
+      padding: 15px;
+      box-shadow: var(--sh);
+      overflow-x: auto;
+      border: 1px solid var(--vmc-border)
+    }
+
+    .gantt-inner {
+      min-width: 580px
+    }
+
+    .g-hdr-row {
+      display: flex;
+      margin-bottom: 7px;
+      font-size: .65rem;
+      color: var(--vmc-gray)
+    }
+
+    .g-lbl-col {
+      width: 155px;
+      flex-shrink: 0;
+      padding-right: 7px;
+      font-weight: 600;
+      font-size: .7rem;
+      color: var(--vmc-ink)
+    }
+
+    .g-weeks {
+      flex: 1;
+      display: flex
+    }
+
+    .g-wh {
+      flex: 1;
+      text-align: center;
+      font-size: .6rem;
+      background: var(--vmc-bg);
+      border-radius: 3px;
+      padding: 2px;
+      margin: 0 1px;
+      color: var(--vmc-gray)
+    }
+
+    .g-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px
+    }
+
+    .g-label {
+      width: 155px;
+      flex-shrink: 0;
+      font-size: .7rem;
+      color: var(--vmc-dark);
+      padding-right: 7px;
+      line-height: 1.3
+    }
+
+    .g-tb {
+      font-size: .53rem;
+      background: var(--vmc-ink);
+      color: #fff;
+      border-radius: 3px;
+      padding: 1px 4px;
+      margin-bottom: 1px;
+      display: inline-block;
+      opacity: .75
+    }
+
+    .g-track {
+      flex: 1;
+      position: relative;
+      height: 22px
+    }
+
+    .g-bg {
+      position: absolute;
+      inset: 0;
+      background: var(--vmc-bg);
+      border-radius: 3px
+    }
+
+    .g-plan {
+      position: absolute;
+      top: 4px;
+      height: 10px;
+      background: #94a3b8;
+      border-radius: 3px;
+      opacity: .5
+    }
+
+    .g-real {
+      position: absolute;
+      top: 4px;
+      height: 10px;
+      border-radius: 3px
+    }
+
+    .g-today {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--vmc-gold);
+      z-index: 5
+    }
+
+    .g-pct {
+      position: absolute;
+      right: 2px;
+      top: 1px;
+      font-size: .58rem;
+      color: var(--vmc-gray)
+    }
+
+    .g-section {
+      padding: 5px 0;
+      border-top: 1.5px solid var(--vmc-bg)
+    }
+
+    .g-section-lbl {
+      font-family: 'Playfair Display', serif;
+      font-size: .75rem;
+      color: var(--vmc-ink);
+      padding: 3px 0;
+      width: 155px;
+      font-weight: 600
+    }
+
+    /* CRONOGRAMA */
+    .wk-card {
+      background: var(--vmc-card);
+      border-radius: var(--r);
+      overflow: hidden;
+      margin-bottom: 11px;
+      box-shadow: var(--sh);
+      border: 1px solid var(--vmc-border)
+    }
+
+    .wk-bar {
+      background: var(--vmc-ink);
+      color: #fff;
+      padding: 10px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center
+    }
+
+    .wk-lbl {
+      font-family: 'Playfair Display', serif;
+      font-size: .88rem
+    }
+
+    .wk-meta {
+      font-size: .68rem;
+      opacity: .6;
+      background: rgba(255, 255, 255, .1);
+      padding: 2px 8px;
+      border-radius: 100px
+    }
+
+    /* RESUMO */
+    .resumo-box {
+      background: var(--vmc-card);
+      border-radius: var(--r);
+      padding: 18px;
+      font-size: .85rem;
+      line-height: 1.75;
+      box-shadow: var(--sh);
+      white-space: pre-wrap;
+      font-family: 'Crimson Pro', serif;
+      border: 1px solid var(--vmc-border)
+    }
+
+    .copy-btn {
+      width: 100%;
+      padding: 14px;
+      background: var(--vmc-gold);
+      color: var(--vmc-dark);
+      border: none;
+      border-radius: var(--r);
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 11px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(232, 160, 32, .3)
+    }
+
+    .copy-btn:active {
+      transform: scale(.98)
+    }
+
+    /* TOAST / SUCCESS POPUP */
+    .toast {
+      position: fixed;
+      bottom: 88px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--vmc-ink);
+      color: #fff;
+      padding: 11px 22px;
+      border-radius: 100px;
+      font-size: .82rem;
+      z-index: 999;
+      opacity: 0;
+      transition: all .3s;
+      pointer-events: none;
+      white-space: nowrap
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0)
+    }
+
+    /* SUCCESS MODAL */
+    .success-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(139, 26, 26, .45);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s
+    }
+
+    .success-modal-overlay.show {
+      opacity: 1;
+      pointer-events: all
+    }
+
+    .success-modal {
+      background: #fff;
+      border-radius: 20px;
+      padding: 36px 32px;
+      text-align: center;
+      box-shadow: 0 8px 40px rgba(139, 26, 26, .3);
+      transform: scale(.85);
+      transition: transform .3s;
+      max-width: 300px;
+      width: 90%;
+      border-top: 5px solid var(--vmc-red)
+    }
+
+    .success-modal-overlay.show .success-modal {
+      transform: scale(1)
+    }
+
+    .success-modal-icon {
+      font-size: 3rem;
+      margin-bottom: 12px
+    }
+
+    .success-modal-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--vmc-red);
+      margin-bottom: 6px
+    }
+
+    .success-modal-msg {
+      font-size: .85rem;
+      color: var(--vmc-gray);
+      line-height: 1.5
+    }
+
+    .success-modal-close {
+      margin-top: 20px;
+      padding: 10px 28px;
+      background: var(--vmc-red);
+      color: #fff;
+      border: none;
+      border-radius: 100px;
+      font-family: 'Playfair Display', serif;
+      font-size: .9rem;
+      cursor: pointer;
+      transition: background .2s
+    }
+
+    .success-modal-close:hover {
+      background: var(--vmc-red-l)
+    }
+
+    /* DEMO BADGE */
+    .demo-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 16px;
+      background: var(--vmc-card);
+      color: var(--vmc-ink);
+      border-radius: 100px;
+      font-size: .75rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1.5px solid var(--vmc-border);
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 12px;
+      box-shadow: var(--sh);
+      transition: all .2s
+    }
+
+    .demo-btn:hover {
+      border-color: var(--vmc-gold);
+      color: var(--vmc-red)
+    }
+
+    /* STATUS COLORS */
+    .txt-g {
+      color: var(--green)
+    }
+
+    .txt-o {
+      color: var(--orange)
+    }
+
+    .txt-r {
+      color: var(--vmc-red)
+    }
+
+    @media(min-width:600px) {
+      .kpi-grid {
+        grid-template-columns: repeat(3, 1fr)
+      }
+    }
+
+    @media(min-width:800px) {
+      .kpi-grid {
+        grid-template-columns: repeat(6, 1fr)
+      }
+    }
+
+    .kpi:hover .tooltip-box,
+    .kpi-side:hover .tooltip-box {
+      display: block !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateX(-50%) translateY(0) !important;
+    }
+
+    /* Modals */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      backdrop-filter: blur(3px)
+    }
+
+    .modal-card {
+      background: #fff;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 400px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+      animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    }
+
+    @keyframes popIn {
+      from {
+        transform: scale(0.8);
+        opacity: 0
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1
+      }
+    }
+
+    .modal-hdr {
+      background: var(--vmc-red);
+      color: #fff;
+      padding: 18px;
+      text-align: center
+    }
+
+    .modal-hdr h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: 700
+    }
+
+    .modal-body {
+      padding: 20px;
+      max-height: 60vh;
+      overflow-y: auto
+    }
+
+    .modal-ftr {
+      padding: 15px;
+      display: flex;
+      gap: 10px;
+      background: #f9f6f3
+    }
+
+    .modal-ftr button {
+      flex: 1;
+      padding: 12px;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s
+    }
+
+    .btn-cancel {
+      background: #e2e8f0;
+      color: #475569
+    }
+
+    .btn-confirm {
+      background: var(--vmc-red);
+      color: #fff
+    }
+
+    .btn-cancel:hover {
+      background: #cbd5e1
+    }
+
+    .btn-confirm:hover {
+      background: var(--vmc-red-l)
+    }
+
+    .summary-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #f1f5f9;
+      font-size: 0.95rem
+    }
+
+    .summary-item:last-child {
+      border-bottom: none
+    }
+
+    .summary-val {
+      font-weight: 700;
+      color: var(--vmc-ink)
+    }
+
+    .summary-date {
+      text-align: center;
+      font-size: 1rem;
+      color: var(--vmc-ink);
+      font-weight: 700;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px dashed #e2e8f0
+    }
+
+    .map-container {
+      background: #fff;
+      border-radius: 16px;
+      padding: 15px;
+      box-shadow: var(--vmc-sh);
+      margin-top: 10px;
+      min-height: 450px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden
+    }
+
+    #mapContent {
+      width: 100%;
+      height: 350px;
+      border-radius: 12px;
+      z-index: 10
+    }
+
+    .map-legend {
+      display: flex;
+      gap: 12px;
+      margin-top: 15px;
+      font-size: .7rem;
+      color: var(--vmc-gray);
+      justify-content: center;
+      flex-wrap: wrap
+    }
+
+    .leg-item {
+      display: flex;
+      align-items: center;
+      gap: 4px
+    }
+
+    .leg-box {
+      width: 10px;
+      height: 10px;
+      border-radius: 2px
+    }
+
+    .map-overlay-info {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      font-size: 0.75rem;
+      pointer-events: none
+    }
+
+    /* Detalhamento no Dashboard */
+    .act-list {
+      margin: 10px 0;
+      padding: 10px;
+      background: var(--vmc-bg2);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px
+    }
+
+    .act-det {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-size: 0.75rem;
+      margin-bottom: 2px
+    }
+
+    .act-det-name {
+      color: var(--vmc-ink);
+      font-weight: 700
+    }
+
+    .act-det-qty {
+      color: var(--vmc-gray);
+      font-size: 0.7rem
+    }
+
+    /* Diário Histórico Accordion */
+    .diario-hist {
+      margin-top: 25px;
+      border-top: 2px dashed var(--vmc-border);
+      padding-top: 20px;
+    }
+
+    .hist-item {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      box-shadow: var(--sh);
+    }
+
+    .hist-hdr {
+      padding: 14px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--vmc-ink);
+      background: var(--vmc-bg2);
+      transition: background 0.2s;
+    }
+
+    .hist-hdr:hover {
+      background: #f1f5f9;
+    }
+
+    .hist-body {
+      padding: 18px;
+      font-size: 0.92rem;
+      color: var(--vmc-dark);
+      display: none;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      border-top: 1px solid #f1f5f9;
+      background: #fff;
+    }
+
+    .hist-item.open .hist-body {
+      display: block;
+    }
+
+    .hist-item.open .hist-hdr {
+      background: #fff;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    /* --- PDF EXPORT STYLES (NEW TEMPLATE) --- */
+    #pdf-render-area {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+    }
+
+    .card-wrapper {
+      position: relative;
+      width: 1281px;
+      height: 659px;
+      flex-shrink: 0;
+      font-family: "Barlow Condensed", sans-serif;
+    }
+
+    .card-wrapper img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1281px;
+      height: 659px;
+      display: block;
+    }
+
+    .campo {
+      position: absolute;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 900;
+      line-height: 1;
+      text-align: center;
+    }
+
+    #pdf-date {
+      top: 77px;
+      left: 435px;
+      width: 248px;
+      font-size: 18px;
+      font-weight: 800;
+      color: #1A1A1A;
+    }
+
+    #asfalto {
+      top: 527px;
+      left: 15px;
+      width: 90px;
+      font-size: 28px;
+      color: #FFFFFF;
+    }
+
+    #granito {
+      top: 527px;
+      left: 113px;
+      width: 90px;
+      font-size: 28px;
+      color: #FFFFFF;
+    }
+
+    #escavacao {
+      top: 545px;
+      left: 222px;
+      width: 188px;
+      font-size: 26px;
+      color: #1A1A1A;
+    }
+
+    #desmonte {
+      top: 545px;
+      left: 429px;
+      width: 188px;
+      font-size: 26px;
+      color: #1A1A1A;
+    }
+
+    #tubo {
+      top: 538px;
+      left: 643px;
+      width: 202px;
+      font-size: 26px;
+      color: #1A1A1A;
+    }
+
+    #pv {
+      top: 538px;
+      left: 857px;
+      width: 202px;
+      font-size: 26px;
+      color: #1A1A1A;
+    }
+
+    #reaterro {
+      top: 497px;
+      left: 1086px;
+      width: 185px;
+      font-size: 38px;
+      color: #FFFFFF;
+    }
+
+    #resumo-asfalto {
+      top: 576px;
+      left: 1168px;
+      width: 100px;
+      font-size: 13.5px;
+      color: #FFFFFF;
+      text-align: right;
+    }
+
+    #resumo-tubo {
+      top: 597px;
+      left: 1168px;
+      width: 100px;
+      font-size: 13.5px;
+      color: #FFFFFF;
+      text-align: right;
+    }
+
+    #resumo-solo {
+      top: 618px;
+      left: 1151px;
+      width: 117px;
+      font-size: 13.5px;
+      color: #FFFFFF;
+      text-align: right;
+    }
+
+    /* DUAL KPI */
+    .kpi.dual {
+      min-width: 250px;
+      flex: 1.5;
+    }
+
+    .kpi-dual-row {
+      display: flex;
+      align-items: stretch;
+      margin-top: 8px;
+      border-top: 1px solid var(--vmc-bg);
+      padding-top: 8px;
+    }
+
+    .kpi-side {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .kpi-side:first-child {
+      border-right: 1px solid var(--vmc-bg);
+    }
+
+    .kpi-side .kpi-v {
+      font-size: 1.8rem;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+
+    .kpi-side .kpi-u {
+      font-size: 0.62rem;
+      color: var(--vmc-gray);
+    }
+
+    /* TOOLTIPS */
+    .kpi,
+    .kpi-side {
+      position: relative;
+    }
+
+    .tooltip-box {
+      position: absolute;
+      bottom: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+      background: #F0EAD8;
+      color: #8B1A1A;
+      padding: 14px;
+      border-radius: var(--rs);
+      font-size: 0.85rem;
+      line-height: 1.45;
+      white-space: normal;
+      min-width: 250px;
+      z-index: 500;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s ease;
+      box-shadow: var(--sh-lg);
+      pointer-events: none;
+      text-align: left;
+      border: 2px solid #E8A020;
+      font-family: 'Crimson Pro', Georgia, serif;
+    }
+
+    .tooltip-box::after,
+    .tooltip-box::before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 8px solid transparent;
+    }
+
+    .tooltip-box::before {
+      border-top-color: #E8A020;
+      margin-top: 2px;
+    }
+
+    .tooltip-box::after {
+      border-top-color: #F0EAD8;
+    }
+
+    .kpi:hover .tooltip-box,
+    .kpi-side:hover .tooltip-box {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .tooltip-title {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #8B1A1A;
+      margin-bottom: 6px;
+      border-bottom: 2px dashed #E8A020;
+      padding-bottom: 5px;
+    }
+
+    .tooltip-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 5px;
+    }
+
+    .tooltip-table th {
+      text-align: left;
+      font-weight: 700;
+      color: #8B1A1A;
+      opacity: 0.8;
+      font-size: 0.72rem;
+      padding-bottom: 4px;
+      border-bottom: 1px solid rgba(139, 26, 26, 0.2);
+    }
+
+    .tooltip-table td {
+      padding: 6px 0;
+      font-size: 0.85rem;
+      color: #8B1A1A;
+      border-bottom: 1px dashed rgba(139, 26, 26, 0.1);
+    }
+
+    .tooltip-table tr:last-child td {
+      border: none;
+    }
+
+    /* MINI CALENDÁRIO */
+    .mini-cal-grid-wrap {
+      margin-top: 10px;
+      border: 1px solid var(--vmc-border);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: var(--sh);
+    }
+
+    .mini-cal-month {
+      background: var(--vmc-bg);
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--vmc-border);
+      color: var(--vmc-ink);
+      text-transform: uppercase;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .mini-cal-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 1px;
+      background: var(--vmc-border);
+    }
+
+    .mini-cal-dow {
+      background: #fafaf8;
+      text-align: center;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 4px 0;
+      color: var(--vmc-gray);
+    }
+
+    .mini-cal-day {
+      background: #fff;
+      text-align: center;
+      font-size: 0.75rem;
+      padding: 5px 0;
+      color: #cbd5e1;
+    }
+
+    .mini-cal-day.wd {
+      color: var(--vmc-dark);
+    }
+
+    .mini-cal-day.sel {
+      background: rgba(232, 160, 32, 0.2);
+      font-weight: 700;
+      color: #92400e;
+    }
+
+    .mini-cal-day.today {
+      background: var(--vmc-ink);
+      color: #fff;
+      font-weight: 700;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 0 0 2px var(--vmc-ink) inset;
+    }
+
+    /* HEATMAP H-H */
+    .hh-grid-wrap {
+      overflow-x: auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: var(--sh);
+      margin-top: 10px;
+      border: 1px solid var(--vmc-border);
+    }
+
+    .hh-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.75rem;
+      min-width: 850px;
+      table-layout: fixed;
+    }
+
+    .hh-table th,
+    .hh-table td {
+      border: 1px solid #f1eeeb;
+      padding: 10px 4px;
+      text-align: center;
+    }
+
+    .hh-table th {
+      background: var(--vmc-ink);
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      font-size: 0.65rem;
+    }
+
+    .hh-table .act-col {
+      text-align: left;
+      padding-left: 12px;
+      font-weight: 700;
+      color: var(--vmc-ink);
+      width: 220px;
+      position: sticky;
+      left: 0;
+      background: #fff;
+      z-index: 5;
+      border-right: 2px solid var(--vmc-bg);
+      white-space: normal;
+      line-height: 1.2;
+    }
+
+    .hh-cell {
+      width: 40px;
+      transition: all 0.2s;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    .hh-cell.val-0 {
+      background: #fafaf8;
+      color: rgba(0, 0, 0, 0.05);
+      font-weight: 400;
+    }
+
+    .hh-cell.val-low {
+      background: #fffbeb;
+      color: #92400e;
+    }
+
+    .hh-cell.val-mid {
+      background: #fef3c7;
+      color: #92400e;
+      box-shadow: inset 0 0 0 1px rgba(232, 160, 32, 0.2);
+    }
+
+    .hh-cell.val-high {
+      background: #fee2e2;
+      color: #991b1b;
+      box-shadow: inset 0 0 0 1px rgba(139, 26, 26, 0.2);
+    }
+
+    .hh-total-row {
+      background: var(--vmc-bg);
+      font-weight: 800;
+      color: var(--vmc-ink);
+      font-family: 'Playfair Display', serif;
+    }
+
+    .hh-total-row td {
+      border-top: 2px solid var(--vmc-ink);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="hdr">
+    <div class="hdr-row">
+      <div style="display:flex;align-items:center;gap:10px">
+        <!-- Logo VM inline (sem dependência externa) -->
+        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"
+          style="display:block;flex-shrink:0">
+          <rect width="40" height="40" rx="8" fill="#E8A020" />
+          <text x="20" y="27" text-anchor="middle" font-family="Georgia,serif" font-size="16" font-weight="bold"
+            fill="#fff" letter-spacing="1">VM</text>
+        </svg>
+        <div>
+          <div class="hdr-logo" style="font-size:1.05rem">Viana <span>&amp;</span> Moura</div>
+          <div class="hdr-sub">EMISSÁRIO LEÃO DOURADO</div>
+        </div>
+      </div>
+      <div class="hdr-right">
+        <div class="hdr-date" id="hdrDate"></div>
+        <div class="hdr-week" id="hdrWeek"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div class="scr act" id="scr-dashboard">
+    <div
+      style="display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,#dcfce7,#bbf7d0);border:1.5px solid #86efac;border-radius:12px;padding:10px 16px;margin:0 0 15px 0;box-shadow:0 2px 8px rgba(22,101,52,.1)">
+      <span style="font-size:1.1rem">✅</span>
+      <div style="flex:1">
+        <div
+          style="font-size:0.72rem;font-weight:800;color:#166534;text-transform:uppercase;letter-spacing:.05em;margin-bottom:1px">
+          Versão Estática — Portfólio de Obra</div>
+        <div style="font-size:0.75rem;color:#15803d;line-height:1.4">Esta página foi gerada automaticamente a partir dos
+          dados reais obtidos após a finalização de todos os serviços do Emissário Leão Dourado em
+          <strong>30/04/2026</strong>. Os dados são fixos e refletem o estado final da obra.
+        </div>
+      </div>
+      <span
+        style="font-size:0.68rem;background:#166534;color:#fff;padding:4px 10px;border-radius:100px;white-space:nowrap;font-weight:700">🔒
+        Somente Leitura</span>
+    </div>
+    <div id="dashContent"></div>
+  </div>
+
+  <!-- LANÇAR -->
+  <div class="scr" id="scr-lancar">
+    <div class="date-sel">
+      <span>📅</span>
+      <input type="date" id="inputDate" class="di">
+      <span style="font-size:.78rem;color:var(--vmc-gray)" id="inputDayName"></span>
+    </div>
+    <div class="t-tabs">
+      <button class="t-tab act" onclick="selTrecho(1)">Trecho 1</button>
+      <button class="t-tab" onclick="selTrecho(2)">Trecho 2</button>
+      <button class="t-tab" onclick="selTrecho(3)">Trecho 3</button>
+    </div>
+    <div id="actForm"></div>
+    <button class="save-btn" onclick="saveProd()">💾 Salvar Produção do Dia</button>
+  </div>
+
+  <!-- GANTT -->
+  <div class="scr" id="scr-gantt">
+    <div class="sec-title">📊 Cronograma Gantt — Emissário</div>
+    <div id="ganttContent"></div>
+  </div>
+
+  <!-- CRONOGRAMA -->
+  <div class="scr" id="scr-cronograma">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+      <div class="sec-title" style="margin-bottom:0;border:none;padding:0">📅 Cronograma Semanal</div>
+      <div style="display:flex;gap:6px;align-items:center">
+        <button onclick="cronNav(-1)"
+          style="padding:7px 14px;border-radius:8px;border:1.5px solid var(--vmc-border);background:var(--vmc-card);color:var(--vmc-dark);font-size:.82rem;cursor:pointer;font-family:'Crimson Pro',serif">‹
+          Anterior</button>
+        <button onclick="cronWeekOffset=0;renderCron()"
+          style="padding:7px 10px;border-radius:8px;border:1.5px solid var(--vmc-ink);background:var(--vmc-ink);color:#fff;font-size:.75rem;cursor:pointer;font-family:'Crimson Pro',serif">Hoje</button>
+        <button onclick="cronNav(1)"
+          style="padding:7px 14px;border-radius:8px;border:1.5px solid var(--vmc-border);background:var(--vmc-card);color:var(--vmc-dark);font-size:.82rem;cursor:pointer;font-family:'Crimson Pro',serif">Próxima
+          ›</button>
+      </div>
+    </div>
+    <div id="cronContent"></div>
+  </div>
+
+
+  <!-- RESUMO -->
+  <div class="scr" id="scr-resumo">
+    <div class="sec-title">📋 Resumo Semanal</div>
+    <div class="date-sel">
+      <span>📅</span>
+      <input type="date" id="resumoDate" class="di" onchange="renderResumo()">
+      <span style="font-size:.78rem;color:var(--vmc-gray)" id="resumoDayName"></span>
+    </div>
+    <div class="t-tabs" id="resumoTabs" style="margin-bottom:15px">
+      <button class="t-tab act" onclick="setResumoSel('all')">Visão Geral</button>
+      <button class="t-tab" onclick="setResumoSel(1)">Trecho 1</button>
+      <button class="t-tab" onclick="setResumoSel(2)">Trecho 2</button>
+      <button class="t-tab" onclick="setResumoSel(3)">Trecho 3</button>
+    </div>
+    <div id="resumoContent"></div>
+  </div>
+
+  <!-- GESTÃO VISUAL -->
+  <div class="scr" id="scr-mapa">
+    <div class="sec-title">📍 Gestão Visual — Traçado Linear</div>
+    <div class="map-container">
+      <div id="mapContent"></div>
+      <div class="map-overlay-info" id="mapInfo">Clique em um trecho</div>
+      <div class="map-legend">
+        <div class="leg-item">
+          <div class="leg-box" style="background:var(--vmc-red)"></div> Realizado
+        </div>
+        <div class="leg-item">
+          <div class="leg-box" style="background:#f0b840"></div> Planejado
+        </div>
+        <div class="leg-item">
+          <div class="leg-box" style="background:#f1f5f9;border:1px solid #ddd"></div> Rede Emissário
+        </div>
+      </div>
+      <div class="map-hint">📍 Mapa real georeferenciado com visão de satélite.</div>
+    </div>
+  </div>
+
+  <!-- CURVA S -->
+  <div class="scr" id="scr-scurve">
+    <div class="sec-title">📈 Curva S do Projeto</div>
+
+    <div class="filter-panel"
+      style="background:var(--vmc-card); padding:15px; border-radius:var(--rs); margin-bottom:15px; box-shadow:var(--sh)">
+      <div
+        style="font-size:0.75rem; font-weight:700; color:var(--vmc-gray); margin-bottom:10px; text-transform:uppercase">
+        Filtros da Curva</div>
+
+      <div style="display:flex; gap:15px; flex-wrap:wrap">
+        <div style="flex:1; min-width:150px">
+          <label style="display:block; font-size:0.7rem; margin-bottom:5px">Trecho:</label>
+          <select id="scurve-trecho" class="di" style="width:100%" onchange="updateScurve()">
+            <option value="all">Todos os Trechos</option>
+            <option value="1">Trecho 1</option>
+            <option value="2">Trecho 2</option>
+            <option value="3">Trecho 3</option>
+          </select>
+        </div>
+
+        <div style="flex:1; min-width:150px">
+          <label style="display:block; font-size:0.7rem; margin-bottom:5px">Categoria de Serviço:</label>
+          <select id="scurve-cat" class="di" style="width:100%" onchange="updateScurve()">
+            <option value="all">Todas as Frentes</option>
+            <option value="ATU">Assentamento de Tubos</option>
+            <option value="REPAS">Pavimentação (Reposição)</option>
+            <option value="ESC">Escavação de Solo</option>
+            <option value="ROC">Desmonte de Rocha</option>
+            <option value="REA">Reaterro de Vala</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div
+      style="background:var(--vmc-card); padding:15px; border-radius:var(--rs); box-shadow:var(--sh); position:relative; min-height:400px">
+      <canvas id="scurveChart"></canvas>
+    </div>
+
+    <div style="margin-top:15px; display:flex; justify-content:space-between; font-size:0.75rem; color:var(--vmc-gray)">
+      <div id="scurve-stats-real">Realizado Acumulado: <strong>—</strong></div>
+      <div id="scurve-stats-plan">Planejado Acumulado: <strong>—</strong></div>
+    </div>
+  </div>
+  <!-- SUCCESS MODAL -->
+  <div class="success-modal-overlay" id="successModal" onclick="closeSuccessModal()">
+    <div class="success-modal" onclick="event.stopPropagation()">
+      <div class="success-modal-icon">✅</div>
+      <div class="success-modal-title">Produção Salva!</div>
+      <div class="success-modal-msg" id="successModalMsg">Os dados foram registrados com sucesso no banco de dados.
+      </div>
+      <button class="success-modal-close" onclick="closeSuccessModal()">Fechar</button>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <!-- BOTTOM NAV -->
+  <nav class="bnav">
+    <button class="bn act" onclick="go('dashboard')"><span class="bn-icon">📊</span>Painel</button>
+    <button class="bn" onclick="go('cronograma')"><span class="bn-icon">📅</span>Crono</button>
+    <button class="bn" onclick="go('gantt')"><span class="bn-icon">📈</span>Gantt</button>
+    <button class="bn" onclick="go('mapa')"><span class="bn-icon">📍</span>Mapa</button>
+    <button class="bn" onclick="go('scurve')"><span class="bn-icon">📈</span>Curva S</button>
+    <button class="bn" onclick="go('resumo')"><span class="bn-icon">📋</span>Resumo</button>
+    <button class="bn" onclick="go('lancar')"><span class="bn-icon">✏️</span>Lançar</button>
+    <button class="bn" onclick="go('diario')"><span class="bn-icon">📝</span>Diário</button>
+  </nav>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // ═══════════════════════════════════════════════════
+    // CONSTANTES E DATAS
+    // ═══════════════════════════════════════════════════
+    const DEADLINE = new Date('2026-04-30T00:00:00');
+    const PROJ_START = new Date('2026-03-09T00:00:00');
+    const GANTT_START = new Date('2026-03-09T00:00:00');
+    const GANTT_END = new Date('2026-04-30T00:00:00');
+    const today = new Date('2026-04-30T00:00:00'); today.setHours(0, 0, 0, 0); // DATA CONGELADA - PORTFÓLIO ESTÁTICO
+    const yesterday = new Date(today.getTime() - 86400000).toISOString().split('T')[0];
+    const yesterdayDate = new Date(today.getTime() - 86400000); yesterdayDate.setHours(0, 0, 0, 0);
+
+    const HOLIDAYS = new Set([
+      '2026-03-06', '2026-04-02', '2026-04-03',
+      '2026-04-13', '2026-04-14', '2026-04-20',
+      '2026-04-21', '2026-04-25', '2026-05-01'
+    ]);
+
+    let WORKING_DAYS_EXTRA = new Set(); // Any day that has explicitly planned work
+
+    const DAY_PT = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
+    const MONTH_PT = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
+
+    function fd(d) { // format date → YYYY-MM-DD
+      return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    }
+    function ptDate(d) { if (!d) return '—'; return `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}/${d.getFullYear()}`; }
+    function isWD(d) {
+      if (typeof d === 'string') d = new Date(d + 'T00:00:00');
+      const ds = fd(d);
+      if (WORKING_DAYS_EXTRA.has(ds)) return true; // Overrides weekends and holidays
+
+      const day = d.getDay();
+      if (day === 0) return false;
+      if (day === 6) return false;
+      return !HOLIDAYS.has(ds);
+    }
+    function countWD(s, e) {
+      let c = 0, d = new Date(s);
+      d.setHours(0, 0, 0, 0);
+      const end = new Date(e); end.setHours(0, 0, 0, 0);
+      while (d <= end) { if (isWD(d)) c++; d.setDate(d.getDate() + 1); }
+      return c;
+    }
+    function addWD(d, n) {
+      let r = new Date(d), rem = n;
+      while (rem > 0) { r.setDate(r.getDate() + 1); if (isWD(r)) rem--; }
+      return r;
+    }
+    function getWeekMon(d) {
+      const day = d.getDay(), diff = day === 0 ? -6 : 1 - day;
+      const m = new Date(d); m.setDate(d.getDate() + diff); m.setHours(0, 0, 0, 0);
+      return m;
+    }
+    function getWeekNum(d) {
+      const m = getWeekMon(d);
+      const diff = Math.round((m - PROJ_START) / (7 * 86400000));
+      return Math.max(1, Math.floor(diff) + 1);
+    }
+    function fmtNum(n, dec = 1) { if (n === null || n === undefined) return '—'; return n.toFixed(dec).replace('.', ','); }
+    function showToast(msg, ms = 3000) {
+      const el = document.getElementById('toast');
+      if (!el) return;
+      el.textContent = msg; el.classList.add('show');
+      setTimeout(() => el.classList.remove('show'), ms);
+    }
+    function showSuccessModal(dateStr) {
+      const d = new Date(dateStr + 'T00:00:00');
+      const dt = `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}/${d.getFullYear()}`;
+      const msgEl = document.getElementById('successModalMsg');
+      if (msgEl) msgEl.textContent = `Produção do dia ${dt} registrada com sucesso no banco de dados. ✅`;
+      const overlay = document.getElementById('successModal');
+      if (overlay) overlay.classList.add('show');
+    }
+    function closeSuccessModal() {
+      const overlay = document.getElementById('successModal');
+      if (overlay) overlay.classList.remove('show');
+    }
+
+    function fmtPct(n) { return (n * 100).toFixed(1).replace('.', ',') + '%'; }
+
+    // Gera o HTML do mini calendário para o tooltip
+    function generateMiniCalendarHTML(targetDate) {
+      const start = new Date(today);
+      const end = new Date(targetDate);
+      if (isNaN(end.getTime())) return '';
+
+      let html = '<div class="mini-cal-grid-wrap">';
+
+      // Vamos mostrar o mês atual e o próximo se necessário
+      let currentMonth = new Date(start.getFullYear(), start.getMonth(), 1);
+      const finalMonth = new Date(end.getFullYear(), end.getMonth(), 1);
+
+      while (currentMonth <= finalMonth) {
+        const monthName = MONTH_PT[currentMonth.getMonth()] + ' ' + currentMonth.getFullYear();
+        html += `<div class="mini-cal-month">${monthName}</div>`;
+        html += '<div class="mini-cal-grid">';
+
+        const dows = ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'];
+        dows.forEach(d => html += `<div class="mini-cal-dow">${d}</div>`);
+
+        const firstDay = currentMonth.getDay();
+        for (let i = 0; i < firstDay; i++) html += '<div></div>';
+
+        const daysInMonth = new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 1, 0).getDate();
+        for (let d = 1; d <= daysInMonth; d++) {
+          const date = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), d);
+          const ds = fd(date);
+          const isToday = ds === fd(today);
+          const isWork = isWD(date);
+          const isSelected = date >= today && date <= end && isWork;
+
+          let cls = 'mini-cal-day';
+          if (isWork) cls += ' wd';
+          if (isSelected) cls += ' sel';
+          if (isToday) cls += ' today';
+
+          html += `<div class="${cls}">${d}</div>`;
+        }
+        html += '</div>';
+        currentMonth.setMonth(currentMonth.getMonth() + 1);
+      }
+
+      html += '</div>';
+      return html;
+    }
+
+    // ═══════════════════════════════════════════════════
+    // DADOS DO PROJETO
+    // ═══════════════════════════════════════════════════
+    let TRECHOS = [];
+
+    // ═══════════════════════════════════════════════════
+    // ESTADO
+    // ═══════════════════════════════════════════════════
+    let actuals = {}; // { 'YYYY-MM-DD': { actId: value } }
+    let selT = 1;
+    let resumoSel = 'all';
+
+
+    function setResumoSel(val) {
+      resumoSel = val;
+      const tabs = document.querySelectorAll('#resumoTabs .t-tab');
+      const values = ['all', 1, 2, 3];
+      tabs.forEach((t, i) => {
+        t.classList.toggle('act', values[i] === val);
+      });
+      renderResumo();
+    }
+
+    async function loadState() {
+      console.log("📦 Carregando dados da base estática...");
+      actuals = STATIC_DB.actuals || {};
+      TRECHOS = STATIC_DB.trechos || [];
+      DIARIOS = STATIC_DB.diarios || [];
+
+      WORKING_DAYS_EXTRA.clear();
+      TRECHOS.forEach(t => t.atividades.forEach(a => {
+        if (a.plano) {
+          Object.keys(a.plano).forEach(ds => {
+            if (a.plano[ds] > 0) WORKING_DAYS_EXTRA.add(ds);
+          });
+        }
+      }));
+
+      const tTabs = document.querySelector('.t-tabs');
+      if (tTabs && TRECHOS.length > 0) {
+        let h = '';
+        TRECHOS.forEach((t) => {
+          h += `<button class="t-tab ${t.id === selT ? 'act' : ''}" onclick="selTrecho(${t.id})">${t.nome}</button>`;
+        });
+        tTabs.innerHTML = h;
+      }
+    }
+
+    async function saveState(trechoId, dateStr, atividades) {
+      try {
+        const res = await fetch('/api/lancamento', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            trecho_id: trechoId,
+            data_lancamento: dateStr,
+            atividades: atividades
+          })
+        });
+        const data = await res.json();
+        if (!data.success) throw new Error(data.error);
+      } catch (e) {
+        console.error("Erro ao salvar no BD", e);
+        throw e;
+      }
+    }
+
+    // ═══════════════════════════════════════════════════
+    // CÁLCULOS
+    // ═══════════════════════════════════════════════════
+    function plannedToDate(at, upTo) {
+      // Soma valores do plano dia a dia até 'upTo'
+      if (!at.plano) return 0;
+      const upToStr = fd(new Date(upTo));
+      return Object.entries(at.plano).reduce((sum, [date, val]) => {
+        return date <= upToStr ? sum + val : sum;
+      }, 0);
+    }
+    function plannedForDay(at, dateStr) {
+      // Retorna o valor exato planejado para aquele dia (vem do Supabase/Excel)
+      if (!at.plano) return 0;
+      return at.plano[dateStr] || 0;
+    }
+    function plannedForWeek(at, wMon, wFri) {
+      let tot = 0; const d = new Date(wMon);
+      while (d <= wFri) { tot += plannedForDay(at, fd(d)); d.setDate(d.getDate() + 1); }
+      return tot;
+    }
+    function actualTotal(id, upTo) {
+      if (!upTo) return Object.values(actuals).reduce((s, day) => s + (Number(day[id]) || 0), 0);
+      const upToStr = typeof upTo === 'string' ? upTo : fd(new Date(upTo));
+      let sum = 0;
+      for (const dateStr in actuals) {
+        if (dateStr <= upToStr) sum += (Number(actuals[dateStr][id]) || 0);
+      }
+      return sum;
+    }
+    function actualForDay(id, dateStr) {
+      return actuals[dateStr] ? Number(actuals[dateStr][id]) || 0 : 0;
+    }
+    function actualForWeek(id, wMon, wFri) {
+      let tot = 0; const d = new Date(wMon);
+      while (d <= wFri) { tot += actualForDay(id, fd(d)); d.setDate(d.getDate() + 1); }
+      return tot;
+    }
+
+    function idpColor(v) { return v >= 0.95 ? 'g' : v >= 0.80 ? 'o' : 'r'; }
+    function idpLabel(v) { return v >= 0.95 ? '✓ No Prazo' : v >= 0.80 ? '⚠ Atenção' : '🚨 Atrasado'; }
+
+    // Atividades que não devem poluir a média ponderada (ex: Desmonte de Rocha, sob demanda)
+    const EXCLUDE_METRICS_IDS = ['ROC', 'DRO'];
+    function shouldExclude(id) { return EXCLUDE_METRICS_IDS.some(ex => id.toUpperCase().includes(ex)); }
+
+    function trechoKPIs(t, customDate) {
+      const refDate = customDate || yesterdayDate;
+      // ── 1. Progresso ponderado (% de cada atividade × peso no total volumétrico) ──
+      // Usa apenas atividades homogêneas dentro do mesmo trecho para % geral
+      let sumPeso = 0, sumRealPct = 0, sumPrevistoPct = 0;
+
+      // Como o cálculo de IDP no dia atual joga a meta lá para cima antes de a produção ser lançada,
+      // usamos 'yesterdayDate' global para comparar a saúde estrita do plano.
+
+      t.atividades.forEach(at => {
+        if (at.total <= 0) return;
+        if (shouldExclude(at.id)) return; // Ignora Desmonte de Rocha nos pesos
+        const aRealizado = actualTotal(at.id, customDate);
+        const aPrevisto = plannedToDate(at, refDate);
+        sumPeso += at.total;
+        sumRealPct += (aRealizado / at.total) * at.total;
+        sumPrevistoPct += (aPrevisto / at.total) * at.total;
+      });
+      const pA = sumPeso > 0 ? sumRealPct / sumPeso : 0;
+      const pP = sumPeso > 0 ? sumPrevistoPct / sumPeso : 0;
+      const idp = pP > 0.001 ? pA / pP : (pA > 0 ? 1.5 : 1.0);
+
+      // ── 2. Atividade âncora: Assentamento de Tubulação (sigla contém "ATU") ──
+      const atu = t.atividades.find(at => at.id && at.id.includes('ATU'));
+
+      let projEnd = null, reqD = null, avgD = null, rem = null, atuTotal = 0, atuReal = 0, atuUn = 'm';
+      const wdLeft = countWD(today, DEADLINE);
+      const trechoDeadline = new Date(t.fim + 'T00:00:00');
+
+      if (atu && atu.total > 0) {
+        atuTotal = atu.total;
+        atuUn = atu.un || 'm';
+        atuReal = actualTotal(atu.id, customDate);
+        rem = atuTotal - atuReal;
+
+        // Produtividade média real em m/dia (apenas dias úteis desde o início do trecho)
+        const elapsed = countWD(new Date(t.inicio + 'T00:00:00'), refDate);
+        avgD = elapsed > 0 ? atuReal / elapsed : null;
+
+        // Projeção de conclusão no ritmo atual
+        if (avgD && avgD > 0 && rem > 0) projEnd = addWD(today, Math.ceil(rem / avgD));
+        else if (rem <= 0) projEnd = new Date(today);
+
+        // Metro/dia necessário para cumprir o prazo do TRECHO
+        const wdLeftTrecho = countWD(today, trechoDeadline);
+        reqD = wdLeftTrecho > 0 && rem > 0 ? rem / wdLeftTrecho : (rem > 0 ? rem : null);
+      } else {
+        // Fallback sem ATU: usa ponderado genérico
+        const elapsed = countWD(new Date(t.inicio + 'T00:00:00'), refDate);
+        avgD = null;
+        rem = sumPeso > 0 ? (1 - pA) * sumPeso : null;
+      }
+
+      // tp/ta para overallKPIs - usa ATU quando existe (ternário explícito para evitar bug com zero)
+      const tp = atu ? atuTotal : sumPeso;
+      const ta = atu ? atuReal : sumRealPct;
+      const tpd = atu ? plannedToDate(atu, refDate) : sumPrevistoPct;
+      // pA/pP para o card do trecho: % ponderada por atividade (unidade-independente)
+      // IDP baseado no ponderado (não no ATU bruto) para representar saúde geral do trecho
+      const idpCard = pP > 0.001 ? pA / pP : (pA > 0 ? 1.0 : 1.0);
+
+
+      return {
+        tp, ta, tpd, pA, pP, idp, projEnd, reqD, avgD, rem,
+        wdLeft, atuTotal, atuReal, atuUn, trechoDeadline
+      };
+    }
+
+    function overallKPIs(customDate) {
+      const refDate = customDate || yesterdayDate;
+      let sumRealVol = 0, sumPrevVol = 0, sumTotalVol = 0;
+      let atuReal = 0, atuTot = 0;
+      let asfReal = 0, asfTot = 0;
+
+      TRECHOS.forEach(t => {
+        t.atividades.forEach(at => {
+          if (at.total <= 0) return;
+          const real = actualTotal(at.id, customDate);
+          const prev = plannedToDate(at, refDate);
+
+          if (!shouldExclude(at.id)) {
+            sumRealVol += real;
+            sumPrevVol += prev;
+            sumTotalVol += at.total;
+          }
+
+          if (at.id && at.id.includes('ATU')) {
+            atuReal += real;
+            atuTot += at.total;
+          }
+
+          if (at.id && (at.id.includes('REPAS') || at.id.includes('RAS'))) {
+            asfReal += real;
+            asfTot += at.total;
+          }
+        });
+      });
+
+      const pA = sumTotalVol > 0 ? sumRealVol / sumTotalVol : 0;
+      const pP = sumTotalVol > 0 ? sumPrevVol / sumTotalVol : 0;
+      const pA_atu = atuTot > 0 ? atuReal / atuTot : 0;
+      const pA_asf = asfTot > 0 ? asfReal / asfTot : (atuTot > 0 ? atuReal / atuTot : 0);
+      const idp = pP > 0.001 ? pA / pP : (pA > 0 ? 1.5 : 1.0);
+
+      const wdLeft = countWD(today, DEADLINE);
+      const atu_elapsed = Math.max(1, countWD(PROJ_START, refDate));
+      const atu_avg_real = atu_elapsed > 0 ? atuReal / atu_elapsed : 0;
+
+      let planEndDate = PROJ_START;
+      TRECHOS.forEach(t => {
+        const d = new Date(t.fim + 'T00:00:00');
+        if (d > planEndDate) planEndDate = d;
+      });
+      const wdLeftPlan = countWD(today, planEndDate);
+      const proj_total_wd_plan = Math.max(1, countWD(PROJ_START, planEndDate));
+      const atu_avg_plan = proj_total_wd_plan > 0 ? atuTot / proj_total_wd_plan : 0;
+
+      let global_proj_end = null;
+      const atu_rem = atuTot - atuReal;
+      if (atu_avg_real > 0 && atu_rem > 0) {
+        global_proj_end = addWD(today, Math.ceil(atu_rem / atu_avg_real));
+      } else if (atu_rem <= 0 && atuTot > 0) {
+        global_proj_end = new Date(today);
+      }
+
+      return { pA, pA_atu, pA_asf, pP, idp, wdLeft, wdLeftPlan, planEndDate, atu_avg_real, atu_avg_plan, global_proj_end, asfReal, asfTot };
+    }
+
+
+    // ═══════════════════════════════════════════════════
+    // RENDER: DASHBOARD
+    // ═══════════════════════════════════════════════════
+    function renderDash() {
+      try {
+        const ov = overallKPIs();
+        const st = idpColor(ov.idp);
+        const behindGlobal = ov.pP > 0.01 && ov.pA < ov.pP - 0.005;
+        const gap = ov.pP - ov.pA;
+        const anyDelay = TRECHOS.some(t => { const k = trechoKPIs(t); return k.idp < 0.90 && k.projEnd && k.projEnd > k.trechoDeadline; });
+        const chipCls = anyDelay ? 'bad' : behindGlobal ? 'warn' : 'ok';
+        const chipTxt = anyDelay ? '⚠ Algum trecho em risco!' : behindGlobal ? '⚠ Em atraso' : '✓ Prazo: 30/04';
+
+        let delaySummary = '';
+        TRECHOS.forEach(t => {
+          const k = trechoKPIs(t);
+          if (k.pP > 0.01 && k.pA < k.pP - 0.005) {
+            const defasagem = fmtPct(k.pP - k.pA);
+            const metaATU = k.reqD ? ` · meta p/ bater prazo do trecho (${ptDate(k.trechoDeadline)}): <strong>${fmtNum(k.reqD, 1)} ${k.atuUn}/dia</strong>` : '';
+            delaySummary += `<div style="margin-top:4px;font-size:.73rem;color:#7f1d1d">🚨 <strong>${t.nome}</strong> — defasagem ${defasagem}${metaATU}</div>`;
+          }
+        });
+
+        let html = `<div class="ov-card" style="${behindGlobal ? 'border:1.5px solid #fca5a5' : ''}">
+      <div class="ov-label">Progresso Médio da Obra — Todas as Frentes</div>
+      <div class="ov-pct" style="color:${behindGlobal ? '#991b1b' : 'var(--vmc-red)'}">${fmtPct(ov.pA)}</div>
+      <div class="pw"><div class="pb w" style="width:${Math.min(ov.pA * 100, 100)}%"></div></div>
+      <div class="ov-detail">
+        <strong>Avanço Físico (Assentamento): ${fmtPct(ov.pA_atu)}</strong><br>
+        Previsto hoje: ${fmtPct(ov.pP)} &nbsp;·&nbsp; IDP Global: <strong style="color:${behindGlobal ? '#dc2626' : 'var(--vmc-ink)'}">${fmtNum(ov.idp, 2)}</strong><br>
+        <strong>Prazo: ${ptDate(DEADLINE)}</strong> (restam ${ov.wdLeft} d.ú.) &nbsp;·&nbsp; <strong>Plano: ${ptDate(ov.planEndDate)}</strong> (restam ${ov.wdLeftPlan} d.ú.)
+      </div>
+      <span class="chip ${chipCls}">${chipTxt}</span>
+      ${behindGlobal ? `<div style="margin-top:10px;padding:10px 12px;background:#fff5f5;border-radius:8px;border-left:3px solid #dc2626"><div style="font-size:.75rem;font-weight:700;color:#7f1d1d;margin-bottom:4px">⚠ Projeto com defasagem de ${fmtPct(gap)} em relação ao planejado</div>${delaySummary}<div style="margin-top:6px;font-size:.72rem;color:#991b1b">📌 Ação recomendada: intensificar ritmo de assentamento e demais frentes para recuperar o avanço perdido.</div></div>` : ''}
+    </div>`;
+
+        TRECHOS.forEach(t => {
+          const k = trechoKPIs(t);
+          if (k.idp < 0.80 && k.projEnd && k.projEnd > k.trechoDeadline) {
+            const delay = Math.ceil((k.projEnd - k.trechoDeadline) / 86400000);
+            const ritmoAtual = k.avgD != null ? `Ritmo atual: <strong>${fmtNum(k.avgD, 1)} ${k.atuUn}/dia</strong> de Assentamento. ` : '';
+            html += `<div class="alert dan"><span class="alert-ico">🚨</span><div><div class="alert-t">${t.nome} — Prazo em Risco</div><div class="alert-b">Projeção de conclusão: <strong>${ptDate(k.projEnd)}</strong> (${delay}d após o plano).<br>${ritmoAtual}Meta p/ bater prazo: <strong>${fmtNum(k.reqD, 1)} ${k.atuUn}/dia</strong>.</div></div></div>`;
+          } else if (k.idp < 0.95 && k.idp >= 0.80) {
+            html += `<div class="alert wrn"><span class="alert-ico">⚠️</span><div><div class="alert-t">${t.nome} — Atenção ao Ritmo</div><div class="alert-b">IDP: ${fmtNum(k.idp, 2)} — Abaixo do planejado. Meta: <strong>${fmtNum(k.reqD, 1)} ${k.atuUn}/dia</strong>.</div></div></div>`;
+          }
+        });
+
+        if (!TRECHOS.some(t => trechoKPIs(t).idp < 0.95)) {
+          html += `<div class="alert suc"><span class="alert-ico">✅</span><div><div class="alert-t">Execução no prazo</div><div class="alert-b">Todos os trechos estão com desempenho adequado para entrega.</div></div></div>`;
+        }
+
+        let atuTotalAll = 0, atuRealAll = 0, trechoTableHtml = '';
+        TRECHOS.forEach(t => {
+          const k = trechoKPIs(t);
+          const atu = t.atividades.find(at => at.id && at.id.includes('ATU'));
+          if (atu) {
+            const real = actualTotal(atu.id);
+            const plan = plannedToDate(atu, yesterdayDate);
+            atuTotalAll += atu.total; atuRealAll += real;
+            const color = real >= plan ? 'var(--green)' : 'var(--vmc-red)';
+            trechoTableHtml += `<tr><td>${t.nome}</td><td style="color:${color};font-weight:700">${fmtNum(real, 0)}m</td><td style="color:#8B1A1A;opacity:0.8">${fmtNum(plan, 0)}m</td></tr>`;
+          }
+        });
+
+        const isDProj = ov.global_proj_end && ov.global_proj_end > ov.planEndDate;
+        const pClrLabel = isDProj ? `color:var(--vmc-red);font-weight:600` : `color:#166534`;
+
+        html += `<div class="kpi-grid">
+      <div class="kpi" style="cursor:help">
+        <div class="kpi-lb">IDP Global</div>
+        <div class="kpi-v ${st}">${fmtNum(ov.idp, 2)}</div>
+        <div class="kpi-u">${ov.idp >= 1 ? 'Adiantado' : idpLabel(ov.idp)}</div>
+        <div class="tooltip-box" style="width:260px">
+          <span class="tooltip-title">Índice de Desempenho (IDP)</span>
+          O IDP mede a eficiência da obra dividindo o <strong>Físico Real</strong> pelo <strong>Físico Planejado</strong>.
+          <ul style="margin-top: 8px; padding-left: 20px; font-size: 0.8rem">
+            <li><strong>IDP &gt; 1:</strong> Adiantado</li>
+            <li><strong>IDP = 1:</strong> No prazo</li>
+            <li><strong>IDP &lt; 1:</strong> Atrasado</li>
+          </ul>
+        </div>
+      </div>
+      <div class="kpi" style="flex:1.2;min-width:180px">
+        <div class="kpi-lb">Média Assentamento</div>
+        <div class="kpi-v" style="font-size:1.15rem">${fmtNum(ov.atu_avg_real, 1)}<span style="font-size:.65rem;font-weight:400;opacity:.7"> R / </span>${fmtNum(ov.atu_avg_plan, 1)}<span style="font-size:.65rem;font-weight:400;opacity:.7"> P (m/dia)</span></div>
+        <div class="kpi-u" style="${pClrLabel}">Simulação Fim: ${ov.global_proj_end ? ptDate(ov.global_proj_end) : '—'}</div>
+      </div>
+      <div class="kpi" style="border-bottom-color:var(--vmc-red); cursor:help;">
+        <div class="kpi-lb">Assentamento</div>
+        <div class="kpi-v ${atuRealAll >= atuTotalAll ? 'g' : atuRealAll > 0 ? 'o' : 'r'}" style="font-size:1.15rem">${fmtNum(atuRealAll, 0)}<span style="font-size:.75rem;font-weight:400;opacity:.6"> / ${fmtNum(atuTotalAll, 0)} m</span></div>
+        <div class="kpi-u">${fmtPct(ov.pA_atu)} concluído</div>
+        <div class="tooltip-box" style="width:280px">
+          <span class="tooltip-title">Resumo por Trecho</span>
+          <table class="tooltip-table"><thead><tr><th>Trecho</th><th>Realizado</th><th>Previsto</th></tr></thead><tbody>${trechoTableHtml}</tbody></table>
+        </div>
+      </div>
+      <div class="kpi" style="border-bottom-color:var(--vmc-gold); cursor:help;">
+        <div class="kpi-lb">REPOSIÇÃO ASFÁLTICA</div>
+        <div class="kpi-v" style="font-size:1.15rem">${fmtNum(ov.asfReal, 0)}<span style="font-size:.75rem;font-weight:400;opacity:.6"> / ${fmtNum(ov.asfTot, 0)} m²</span></div>
+        <div class="kpi-u">${fmtPct(ov.pA_asf)} concluído</div>
+        <div class="tooltip-box" style="width:280px">
+          <span class="tooltip-title">Status Pavimentação</span>
+          Mede o progresso de reposição asfáltica em todos os trechos.
+          <table class="tooltip-table" style="margin-top:8px">
+            <thead><tr><th>Trecho</th><th>Real</th><th>Total</th></tr></thead>
+            <tbody>
+              ${TRECHOS.map(t => {
+          let r = 0, tot = 0;
+          t.atividades.forEach(at => {
+            if (at.id && (at.id.includes('REPAS') || at.id.includes('RAS'))) {
+              r += actualTotal(at.id);
+              tot += at.total;
+            }
+          });
+          return `<tr><td>${t.nome}</td><td>${fmtNum(r, 0)}</td><td>${fmtNum(tot, 0)}</td></tr>`;
+        }).join('')}
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="kpi dual">
+        <div class="kpi-lb">Dias (Úteis Restantes)</div>
+        <div class="kpi-dual-row">
+          <div class="kpi-side">
+            <div class="kpi-tag">PRAZO</div>
+            <div class="kpi-v ${ov.wdLeft <= 0 ? 'bad' : 'ok'}">${ov.wdLeft}</div>
+            <div class="kpi-u">até 30/04</div>
+            <div class="tooltip-box" style="left:0;transform:none;right:auto">
+               <span class="tooltip-title">Dias Úteis p/ o Prazo</span>
+               Considerando hoje até <strong>30/04</strong>, descontando fins de semana e feriados nacionais/locais.
+               ${generateMiniCalendarHTML(DEADLINE)}
+            </div>
+          </div>
+          <div class="kpi-side">
+            <div class="kpi-tag">PLANO</div>
+            <div class="kpi-v" style="color:var(--vmc-ink)">${ov.wdLeftPlan}</div>
+            <div class="kpi-u">até ${ptDate(ov.planEndDate)}</div>
+            <div class="tooltip-box" style="left:auto;right:0;transform:none">
+               <span class="tooltip-title">Dias Úteis p/ o Plano</span>
+               Considerando hoje até o término das atividades do cronograma (<strong>${ptDate(ov.planEndDate)}</strong>).
+               ${generateMiniCalendarHTML(ov.planEndDate)}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-lb">Semana</div>
+        <div class="kpi-v" style="color:#0369a1">S${getWeekNum(today)}</div>
+        <div class="kpi-u">de 8 semanas</div>
+      </div>
+    </div>`;
+
+        html += `<div class="sec-title" style="margin-top:4px">📍 Gestão por Trecho (Detalhamento)</div>`;
+        let cumRealAll = 0, cumTotalAll = 0, cumPrevAll = 0;
+
+        TRECHOS.forEach(t => {
+          const k = trechoKPIs(t);
+          cumRealAll += k.ta; cumTotalAll += k.tp; cumPrevAll += k.tpd;
+          const pACum = cumTotalAll > 0 ? cumRealAll / cumTotalAll : 0;
+          const pPCum = cumTotalAll > 0 ? cumPrevAll / cumTotalAll : 0;
+          const statusBadge = (k.pP > 0.01 && k.pA < k.pP - 0.005) ? `<span style="font-size:.65rem;padding:2px 8px;border-radius:10px;background:#fee2e2;color:#991b1b;font-weight:700;margin-left:8px">⚠ ABAIXO DO PLANO</span>` : (k.pP > 0.01 ? `<span style="font-size:.65rem;padding:2px 8px;border-radius:10px;background:#dcfce7;color:#166534;font-weight:600;margin-left:8px">✓ No Prazo</span>` : '');
+
+          let actsHtml = '<div class="act-list">';
+          t.atividades.forEach(at => {
+            const aReal = actualTotal(at.id), aPrev = plannedToDate(at, today), aPct = at.total > 0 ? (aReal / at.total) : 0, ptdPct = at.total > 0 ? (aPrev / at.total) : 0;
+            const aSt = idpColor(ptdPct > 0.01 ? aPct / ptdPct : 1);
+            actsHtml += `<div><div class="act-det"><span class="act-det-name">${at.nome}</span><span class="act-det-qty"><strong>${fmtNum(aReal, 1)}</strong> / ${fmtNum(at.total, 0)} ${at.un}</span></div><div class="pw2" style="height:4px;margin:0"><div class="pb ${aSt}" style="width:${Math.min(aPct * 100, 100)}%"></div></div></div>`;
+          });
+          actsHtml += '</div>';
+
+          let projH = k.projEnd ? `<div style="font-size:.72rem;color:${k.projEnd > DEADLINE ? '#dc2626' : '#16a34a'};margin-top:2px">${k.projEnd > DEADLINE ? '🚨' : '✅'} Projeção Fim Trecho: <strong>${ptDate(k.projEnd)}</strong></div>` : '';
+
+          html += `<div class="tc" style="border-left-color:${k.idp >= 0.95 ? '#15803d' : k.idp >= 0.80 ? '#c2410c' : 'var(--vmc-red)'}">
+        <div class="tc-hdr"><div><div class="tc-name">${t.nome}${statusBadge}</div><div class="tc-meta"><span>📅 Inicio: ${ptDate(new Date(t.inicio + 'T00:00:00'))}</span><span>🏁 Previsto: ${ptDate(new Date(t.fim + 'T00:00:00'))}</span></div></div><div style="text-align:right"><span class="idp-badge ${idpColor(k.idp)}">IDP ${fmtNum(k.idp, 2)}</span></div></div>
+        <div style="font-size:.8rem;font-weight:600;color:var(--vmc-ink);margin:10px 0 5px">Status do Trecho:</div>
+        <div style="font-size:.75rem;color:var(--vmc-gray);margin-bottom:8px">Físico Real: <strong style="color:var(--vmc-dark)">${fmtPct(k.pA)}</strong> &nbsp;·&nbsp; Físico Previsto: <strong>${fmtPct(k.pP)}</strong></div>
+        <div class="pw2" title="Realizado"><div class="pb ${idpColor(k.idp)}" style="width:${Math.min(k.pA * 100, 100)}%"></div></div>
+        ${actsHtml}
+        <div style="margin-top:12px;padding-top:10px;border-top:1px dashed #ddd"><div style="font-size:.7rem;text-transform:uppercase;color:var(--vmc-gray-l);margin-bottom:4px">Progresso Acumulado (Obra Linear até ${t.nome})</div><div style="display:flex;justify-content:space-between;font-size:.75rem;margin-bottom:4px"><span>Real: <strong>${fmtPct(pACum)}</strong></span><span style="opacity:0.6">Prev: ${fmtPct(pPCum)}</span></div><div class="pw" style="height:6px;margin:0"><div class="pb w" style="width:${Math.min(pACum * 100, 100)}%"></div></div></div>
+        ${projH}
+      </div>`;
+        });
+
+        document.getElementById('dashContent').innerHTML = html;
+      } catch (err) {
+        console.error("Erro no Dashboard:", err);
+        document.getElementById('dashContent').innerHTML = `<div class="alert dan"><span class="alert-ico">❌</span><div><div class="alert-t">Erro na Renderização</div><div class="alert-b">${err.message}</div></div></div>`;
+      }
+    }
+
+    // ═══════════════════════════════════════════════════
+    // RENDER: LANÇAR
+    // ═══════════════════════════════════════════════════
+    function renderLancar() {
+      const dateStr = document.getElementById('inputDate').value;
+      if (!dateStr) return;
+      const d = new Date(dateStr + 'T00:00:00');
+      document.getElementById('inputDayName').textContent = DAY_PT[d.getDay()];
+      const t = TRECHOS.find(t => t.id === selT);
+      const saved = actuals[dateStr] || {};
+      let html = '';
+
+      if (!t || !t.atividades || t.atividades.length === 0) {
+        document.getElementById('actForm').innerHTML = `<div class="alert wrn"><span class="alert-ico">⚠️</span><div><div class="alert-t">Sem atividades</div><div class="alert-b">Não há plano para este trecho no banco de dados. Sincronize com o Excel.</div></div></div>`;
+        return;
+      }
+
+      if (!isWD(d)) {
+        html += `<div class="alert wrn"><span class="alert-ico">📅</span><div><div class="alert-t">Dia não útil (fim de semana ou feriado)</div><div class="alert-b">Você pode lançar mesmo assim caso haja trabalho extraordinário.</div></div></div>`;
+      }
+      t.atividades.forEach(at => {
+        const pt = plannedForDay(at, dateStr);
+        const sv = saved[at.id] || '';
+        const cum = actualTotal(at.id);
+        const pctD = at.total > 0 ? cum / at.total : 0;
+        const ptdPct = at.total > 0 ? plannedToDate(at, today) / at.total : 0;
+        const idpAct = ptdPct > 0.001 ? pctD / ptdPct : 1;
+        const sc = idpColor(idpAct);
+        html += `<div class="act-item">
+      <div class="act-hdr">
+        <div class="act-name">${at.nome}</div>
+        <div class="plan-td">Meta hoje:<br><strong>${fmtNum(pt, 1)}</strong> ${at.un}<br>
+          <span style="font-size:.68rem;color:var(--vmc-gray)">${fmtPct(pctD)} concluído</span>
+        </div>
+      </div>
+      <div class="inp-row">
+        <input type="number" class="qi" id="inp_${at.id}" value="${sv}" step="0.1" placeholder="0">
+        <span class="ul">${at.un}</span>
+      </div>
+      <div class="pw2" style="margin-top:7px"><div class="pb ${sc}" style="width:${Math.min(pctD * 100, 100)}%"></div></div>
+    </div>`;
+      });
+      document.getElementById('actForm').innerHTML = html;
+    }
+
+    function selTrecho(id) {
+      selT = id;
+      document.querySelectorAll('.t-tab').forEach((b, i) => b.classList.toggle('act', i === id - 1));
+      renderLancar();
+    }
+
+    let pendingSave = null;
+
+    function showModal(id) {
+      const m = document.getElementById(id);
+      m.style.display = 'flex';
+    }
+
+    function hideModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+
+    function saveProd() {
+      const dateStr = document.getElementById('inputDate').value;
+      if (!dateStr) { showToast('Selecione uma data'); return; }
+
+      const t = TRECHOS.find(t => t.id === selT);
+      let ok = false;
+      let summaryHtml = '';
+      let atividadesParaSalvar = {};
+
+      t.atividades.forEach(at => {
+        const inp = document.getElementById('inp_' + at.id);
+        if (inp) {
+          const v = parseFloat(inp.value);
+          if (!isNaN(v) && v !== 0) {
+            atividadesParaSalvar[at.id] = v;
+            summaryHtml += `<div class="summary-item">
+          <span>${at.nome}</span>
+          <span class="summary-val" style="color:${v < 0 ? '#dc2626' : 'var(--vmc-ink)'}">${v > 0 ? '+' : ''}${fmtNum(v, 1)} ${at.un}</span>
+        </div>`;
+            ok = true;
+          }
+        }
+      });
+
+      if (ok) {
+        pendingSave = { trechoId: t.id, dateStr, atividades: atividadesParaSalvar };
+        document.getElementById('confirmDate').textContent = ptDate(new Date(dateStr + 'T00:00:00'));
+        document.getElementById('confirmList').innerHTML = summaryHtml;
+        showModal('confirmModal');
+      } else {
+        showToast('Nenhum valor informado');
+      }
+    }
+
+    async function executeSave() {
+      if (!pendingSave) return;
+      hideModal('confirmModal');
+
+      const bBtn = document.querySelector('.save-btn');
+      const oldText = bBtn.textContent;
+      bBtn.textContent = '⏳ Salvando...';
+      bBtn.disabled = true;
+
+      try {
+        const { trechoId, dateStr, atividades } = pendingSave;
+        await saveState(trechoId, dateStr, atividades);
+
+        // Atualizar local
+        if (!actuals[dateStr]) actuals[dateStr] = {};
+        Object.assign(actuals[dateStr], atividades);
+
+        document.getElementById('successMsg').textContent = `Produção salva para o dia ${ptDate(new Date(dateStr + 'T00:00:00'))}.`;
+        showModal('successModal');
+
+        renderDash();
+        renderLancar();
+      } catch (err) {
+        showToast('❌ Erro ao salvar: ' + err.message);
+      } finally {
+        bBtn.textContent = oldText;
+        bBtn.disabled = false;
+        pendingSave = null;
+      }
+    }
+
+
+    // ═══════════════════════════════════════════════════
+    // RENDER: GANTT
+    // ═══════════════════════════════════════════════════
+    function renderGantt() {
+      const span = (GANTT_END - GANTT_START) / 86400000;
+      function p(ds) { return Math.max(0, Math.min(100, ((new Date(ds + 'T00:00:00') - GANTT_START) / ((GANTT_END - GANTT_START))) * 100)); }
+      const todayP = p(fd(today));
+
+      // Week headers
+      let weeks = '';
+      for (let i = 0; i < 9; i++) {
+        const ws = new Date(GANTT_START); ws.setDate(GANTT_START.getDate() + i * 7);
+        weeks += `<div class="g-wh">S${i + 1}<br>${String(ws.getDate()).padStart(2, '0')}/${String(ws.getMonth() + 1).padStart(2, '0')}</div>`;
+      }
+
+      let html = `<div class="gantt-wrap"><div class="gantt-inner">
+    <div class="g-hdr-row">
+      <div class="g-lbl-col" style="font-family:'Playfair Display',serif">Atividade</div>
+      <div class="g-weeks">${weeks}</div>
+    </div>
+    <div class="g-today-label" style="margin-bottom:4px;font-size:.68rem;color:var(--vmc-gold)">▼ Linha dourada = Hoje (${ptDate(today)})</div>`;
+
+      TRECHOS.forEach(t => {
+        html += `<div class="g-section"><div style="display:flex;align-items:center">
+      <div class="g-section-lbl">${t.nome}</div>
+      <div style="flex:1;position:relative;height:4px;background:${t.cor}20;border-radius:2px">
+        <div class="g-today" style="left:${todayP}%"></div>
+      </div>
+    </div></div>`;
+        t.atividades.forEach(at => {
+          const sp = p(at.ini), ep = p(at.fim);
+          const wp = Math.max(ep - sp, 1);
+          const cum = actualTotal(at.id);
+          const pctD = at.total > 0 ? cum / at.total : 0;
+          const ptdPct = at.total > 0 ? plannedToDate(at, today) / at.total : 0;
+          const idpV = ptdPct > 0.001 ? pctD / ptdPct : 1;
+          const bc = idpColor(idpV) === 'g' ? '#16a34a' : idpColor(idpV) === 'o' ? '#ea580c' : '#8B1A1A';
+          const aw = wp * Math.min(pctD, 1);
+          html += `<div class="g-row">
+        <div class="g-label"><div class="g-tb">T${t.id}</div>${at.nome}</div>
+        <div class="g-track">
+          <div class="g-bg"></div>
+          <div class="g-plan" style="left:${sp}%;width:${wp}%"></div>
+          <div class="g-real" style="left:${sp}%;width:${aw}%;background:${bc}"></div>
+          <div class="g-today" style="left:${todayP}%"></div>
+          <div class="g-pct">${(pctD * 100).toFixed(0)}%</div>
+        </div>
+      </div>`;
+        });
+      });
+
+      html += `</div>
+    <div style="margin-top:12px;display:flex;gap:16px;font-size:.72rem;color:var(--vmc-gray);flex-wrap:wrap">
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:14px;height:8px;background:#94a3b8;border-radius:2px;display:inline-block;opacity:.5"></span>Planejado</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:14px;height:8px;background:var(--vmc-ink);border-radius:2px;display:inline-block"></span>Realizado</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:2px;height:14px;background:var(--vmc-gold);display:inline-block"></span>Hoje</span>
+      <span style="color:var(--vmc-gray-l)">Verde: no prazo · Laranja: atenção · Vermelho: atrasado</span>
+    </div>
+  </div>`;
+
+      document.getElementById('ganttContent').innerHTML = html;
+    }
+
+    let scurveChartInstance = null;
+
+    function renderScurve() {
+      const trechoFilter = document.getElementById('scurve-trecho').value;
+      const catFilter = document.getElementById('scurve-cat').value;
+
+      // 1. Gerar labels (semanas)
+      const labels = [];
+      const start = new Date(GANTT_START);
+      const end = new Date(GANTT_END);
+      let curr = getWeekMon(start);
+      while (curr <= end) {
+        labels.push(`S${getWeekNum(curr)} (${ptDate(curr)})`);
+        curr.setDate(curr.getDate() + 7);
+      }
+
+      // 2. Calcular Planejado e Realizado Acumulado usando a lógica oficial do Dashboard
+      const plannedAcc = [];
+      const actualAcc = [];
+
+      const todayMon = getWeekMon(today);
+
+      for (let i = 0; i < labels.length; i++) {
+        // Pegar o último dia daquela semana (Domingo) para o cálculo acumulado
+        const wkMon = new Date(getWeekMon(start));
+        wkMon.setDate(wkMon.getDate() + i * 7);
+        const wkSun = new Date(wkMon);
+        wkSun.setDate(wkSun.getDate() + 6);
+        const dateStr = fd(wkSun);
+
+        // Se o filtro for global ("Todas as frentes"), usamos a lógica de overallKPIs
+        // Se houver filtro de trecho ou categoria, precisamos de uma lógica similar mas filtrada
+        let pA = 0, pP = 0;
+
+        if (trechoFilter === 'all' && catFilter === 'all') {
+          const stats = overallKPIs(dateStr);
+          pA = stats.pA * 100;
+          pP = stats.pP * 100;
+        } else {
+          // Lógica filtrada que emula o overallKPIs
+          let sumReal = 0, sumPrev = 0, sumTotal = 0;
+          TRECHOS.forEach(t => {
+            if (trechoFilter !== 'all' && t.id.toString() !== trechoFilter) return;
+            t.atividades.forEach(at => {
+              if (at.total <= 0) return;
+              const isEx = shouldExclude(at.id) || (at.id && (at.id.includes('ROC') || at.id.includes('DRO')));
+              if (catFilter === 'all' && isEx) return;
+              if (catFilter !== 'all' && !at.id.toUpperCase().includes(catFilter)) return;
+
+              sumReal += actualTotal(at.id, dateStr);
+              sumPrev += plannedToDate(at, dateStr);
+              sumTotal += at.total;
+            });
+          });
+          pA = sumTotal > 0 ? (sumReal / sumTotal) * 100 : 0;
+          pP = sumTotal > 0 ? (sumPrev / sumTotal) * 100 : 0;
+        }
+
+        plannedAcc.push(pP);
+
+        // Só mostrar realizado até a semana atual (ou se houver dados)
+        if (wkMon <= todayMon) {
+          actualAcc.push(pA);
+        } else {
+          actualAcc.push(null);
+        }
+      }
+
+      document.getElementById('scurve-stats-real').innerHTML = `Realizado Acumulado: <strong>${fmtNum(actualAcc.filter(v => v !== null).pop() || 0, 1)}%</strong>`;
+      document.getElementById('scurve-stats-plan').innerHTML = `Planejado Acumulado: <strong>${fmtNum(plannedAcc[labels.length - 1] || 0, 1)}%</strong>`;
+
+      const ctx = document.getElementById('scurveChart').getContext('2d');
+      if (scurveChartInstance) scurveChartInstance.destroy();
+
+      // Registrar o plugin de labels
+      Chart.register(ChartDataLabels);
+
+      scurveChartInstance = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [
+            {
+              label: 'Planejado Acumulado (%)',
+              data: plannedAcc,
+              borderColor: '#94a3b8',
+              backgroundColor: 'rgba(148, 163, 184, 0.1)',
+              borderWidth: 2,
+              pointRadius: 4,
+              tension: 0.3,
+              fill: true,
+              datalabels: {
+                align: 'top',
+                offset: 8,
+                color: '#64748b',
+                formatter: (v) => v > 0 ? v.toFixed(1) + '%' : ''
+              }
+            },
+            {
+              label: 'Realizado Acumulado (%)',
+              data: actualAcc,
+              borderColor: '#8B1A1A',
+              backgroundColor: 'rgba(139, 26, 26, 0.1)',
+              borderWidth: 4,
+              pointRadius: 6,
+              pointBackgroundColor: '#8B1A1A',
+              tension: 0.3,
+              fill: false,
+              datalabels: {
+                align: 'bottom',
+                offset: 10,
+                color: '#8B1A1A',
+                font: { weight: 'bold' },
+                formatter: (v) => v !== null ? v.toFixed(1) + '%' : ''
+              }
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          layout: { padding: { top: 30, bottom: 30 } },
+          scales: {
+            y: {
+              beginAtZero: true,
+              max: Math.max(100, Math.ceil(Math.max(...plannedAcc, ...actualAcc.filter(v => v !== null)) / 10) * 10),
+              ticks: { callback: v => v + '%' }
+            },
+            x: { ticks: { font: { size: 11 } } }
+          },
+          plugins: {
+            legend: { position: 'top', labels: { boxWidth: 15, font: { size: 12, weight: 'bold' } } },
+            tooltip: {
+              mode: 'index',
+              intersect: false,
+              callbacks: { label: context => `${context.dataset.label}: ${context.parsed.y.toFixed(1)}%` }
+            },
+            datalabels: {
+              display: (context) => {
+                // Mostrar labels apenas a cada 2 semanas ou na última semana para não poluir
+                return context.dataIndex === labels.length - 1 || context.dataIndex % 2 === 0;
+              }
+            }
+          }
+        }
+      });
+    }
+
+    function updateScurve() { renderScurve(); }
+
+    // Offset de semana para navegação (0 = semana atual, -1 = anterior, +1 = próxima, etc.)
+    let cronWeekOffset = 0;
+
+    function renderCron() {
+      const wkMon = getWeekMon(today);
+      // Offset de navegação
+      const baseDate = new Date(wkMon);
+      baseDate.setDate(wkMon.getDate() + cronWeekOffset * 7);
+
+      // Renderizar 2 semanas: a selecionada e a seguinte
+      let html = '';
+
+      for (let w = 0; w < 2; w++) {
+        const mon = new Date(baseDate); mon.setDate(baseDate.getDate() + w * 7);
+        const fri = new Date(mon); fri.setDate(mon.getDate() + 5); // Sábado
+        const wn = getWeekNum(mon);
+        const isPast = fri < today;
+        const isCurrent = fd(mon) <= fd(today) && fd(today) <= fd(fri);
+
+        // --- META SEMANAL ---
+        let metaLines = '';
+        TRECHOS.forEach(t => t.atividades.forEach(at => {
+          const pw = plannedForWeek(at, mon, fri);
+          const aw = actualForWeek(at.id, mon, fri);
+          if (pw > 0.05 || aw > 0) {
+            const pctW = pw > 0 ? aw / pw : (aw > 0 ? 1 : 0);
+            const color = pctW >= 0.9 ? '#166534' : pctW >= 0.7 ? '#9a3412' : isPast ? '#991b1b' : 'var(--vmc-gray)';
+            const awFmt = `<strong style="color:${color}">${fmtNum(aw, 1)}</strong>`;
+            const pwFmt = fmtNum(pw, 1);
+
+            // Calcular Produtividade Diária (Média)
+            const wkWd = Math.max(1, countWD(mon, fri));
+            let awDays = wkWd;
+            if (isCurrent) {
+              const hasStartedToday = actualForDay(at.id, fd(today)) > 0;
+              const endD = hasStartedToday ? today : new Date(today.getTime() - 86400000);
+              awDays = Math.max(1, countWD(mon, endD));
+            } else if (!isPast) {
+              awDays = 1;
+            }
+            const avgPlan = pw / wkWd;
+            const avgReal = aw / awDays;
+
+            metaLines += `<div style="font-size:.72rem;padding:5px 0;border-bottom:1px solid #f3f4f6;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:4px">
+          <span style="color:var(--vmc-gray);min-width:140px;flex:1">T${t.id} · ${at.nome}</span>
+          
+          <span style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:flex-end;flex:2">
+            <span style="font-size:.65rem;color:var(--vmc-gray);background:var(--vmc-bg);padding:2px 6px;border-radius:4px" title="Produtividade Média Diária (m, m³, un/dia)">
+              Ø Plan: <strong>${fmtNum(avgPlan, 1)}</strong> / Real: <strong style="color:${color}">${fmtNum(avgReal, 1)}</strong> ${at.un}/dia
+            </span>
+            <span style="white-space:nowrap">
+              <span style="color:var(--vmc-gray-l)">Plan: ${pwFmt}</span>
+              &nbsp;·&nbsp;
+              <span>Real: ${awFmt} ${at.un}</span>
+              ${aw > 0 ? `<span style="font-size:.6rem;margin-left:4px;padding:1px 5px;border-radius:8px;background:${pctW >= 0.9 ? '#dcfce7' : pctW >= 0.7 ? '#fef3c7' : '#fee2e2'};color:${color}">${(pctW * 100).toFixed(0)}%</span>` : ''}
+            </span>
+          </span>
+        </div>`;
+          }
+        }));
+
+        // --- DIAS ---
+        let daysH = '';
+        for (let dd = 0; dd < 6; dd++) {
+          const day = new Date(mon); day.setDate(mon.getDate() + dd);
+          const ds = fd(day);
+          const isT = ds === fd(today);
+          const isH = !isWD(day) && day.getDay() !== 0;
+          const isP = day < today;
+          let tasks = '';
+
+          TRECHOS.forEach(t => t.atividades.forEach(at => {
+            const pd = plannedForDay(at, ds);
+            const ad = actualForDay(at.id, ds);
+            if (pd > 0.05 || ad > 0) {
+              const done = ad > 0;
+              const miss = isP && !done && pd > 0.05 && !isH;
+
+              // Nova Lógica de Cores:
+              // Verde: Realizado >= Planejado
+              // Amarelo: Realizado < Planejado (mas ad > 0)
+              // Vermelho: Realizado == 0 e Planejado > 0
+
+              let bg = '#f1f5f9'; // Padrão: Previsto (cinza claro)
+              let col = '#374151'; // Texto escuro
+              let iconStr = '';
+
+              if (ad >= pd && pd > 0.05) {
+                bg = '#dcfce7'; col = '#166534'; // Verde
+                iconStr = `<span style="background:rgba(22,101,52,.15);padding:0 3px;border-radius:3px;font-size:.58rem">✓ ${fmtNum(ad, 0)}</span>`;
+              } else if (ad > 0 && ad < pd) {
+                bg = '#fef3c7'; col = '#92400e'; // Amarelo
+                iconStr = `<span style="background:rgba(146,64,14,.1);padding:0 3px;border-radius:3px;font-size:.58rem">⚠ ${fmtNum(ad, 0)}</span>`;
+              } else if (ad === 0 && pd > 0.05) {
+                if (isP && !isH) {
+                  bg = '#fee2e2'; col = '#991b1b'; // Vermelho (Atrasado)
+                  iconStr = `<span style="font-size:.58rem">🚨 0</span>`;
+                } else {
+                  bg = '#f1f5f9'; col = '#374151'; // Previsto
+                  iconStr = '';
+                }
+              } else if (pd <= 0.05 && ad > 0) {
+                bg = '#dcfce7'; col = '#166534'; // Extraordinário
+                iconStr = `<span style="background:rgba(22,101,52,.15);padding:0 3px;border-radius:3px;font-size:.58rem">★ ${fmtNum(ad, 0)}</span>`;
+              }
+
+              tasks += `<span style="font-size:.65rem;padding:2px 6px;margin:1px 2px 1px 0;border-radius:4px;background:${bg};color:${col};display:inline-flex;align-items:center;gap:3px">
+            <span>T${t.id} ${at.nome.substring(0, 10)}…</span>
+            <span style="font-weight:600">${fmtNum(pd, 0)} ${at.un}</span>
+            ${iconStr}
+          </span>`;
+            }
+          }));
+
+          daysH += `<div style="padding:8px 0;border-bottom:1px solid var(--vmc-border);background:${isH ? '#fff7ed' : isT ? '#fff8e1' : ''}">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+          <div style="display:flex;align-items:center;gap:8px">
+            <span style="font-size:.8rem;font-weight:${isT ? 700 : 400};color:${isT ? 'var(--vmc-red)' : 'var(--vmc-dark)'}">${DAY_PT[day.getDay()]} ${String(day.getDate()).padStart(2, '0')}/${String(day.getMonth() + 1).padStart(2, '0')}</span>
+          </div>
+          ${isH ? '<span style="font-size:.62rem;background:#fed7aa;color:#9a3412;padding:1px 7px;border-radius:10px">FERIADO/DESCANSO</span>' : ''}
+          ${isT ? '<span style="font-size:.62rem;background:#fef08a;color:#854d0e;padding:1px 7px;border-radius:10px">HOJE</span>' : ''}
+        </div>
+        <div>${tasks || '<span style="font-size:.68rem;color:#9ca3af">Sem atividades previstas</span>'}</div>
+      </div>`;
+        }
+
+        const statusLabel = isCurrent ? 'Semana atual' : isPast ? 'Concluída' : 'Futura';
+        const statusColor = isCurrent ? 'var(--vmc-gold)' : isPast ? '#94a3b8' : '#6ee7b7';
+
+        html += `<div class="wk-card">
+      <div class="wk-bar">
+        <span class="wk-lbl">Semana ${wn} — ${ptDate(mon)} a ${ptDate(fri)}</span>
+        <span class="wk-meta" style="background:rgba(255,255,255,.15)">${statusLabel}</span>
+      </div>
+      <div style="padding:10px 15px 4px;background:#fafaf8;border-bottom:1px solid var(--vmc-border)">
+        <div style="font-size:.65rem;color:var(--vmc-gray);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px;display:flex;justify-content:space-between">
+          <span>Metas da Semana</span>
+          <span style="color:${statusColor}">${statusLabel}</span>
+        </div>
+        ${metaLines || '<div style="font-size:.72rem;color:#9ca3af">Sem atividades previstas</div>'}
+      </div>
+      <div style="padding:4px 15px 8px">${daysH}</div>
+    </div>`;
+      }
+
+      // Legenda
+      html += `<div style="display:flex;gap:14px;flex-wrap:wrap;font-size:.72rem;color:var(--vmc-gray);padding:6px 2px 16px">
+    <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#dcfce7;border-radius:3px;display:inline-block"></span>Concluído</span>
+    <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#fef3c7;border-radius:3px;display:inline-block"></span>Parcial / Atenção</span>
+    <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#fee2e2;border-radius:3px;display:inline-block"></span>Atrasado</span>
+    <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#f1f5f9;border-radius:3px;display:inline-block"></span>Previsto</span>
+  </div>`;
+
+      document.getElementById('cronContent').innerHTML = html;
+    }
+
+    function cronNav(dir) {
+      cronWeekOffset += dir;
+      renderCron();
+    }
+
+    // ═══════════════════════════════════════════════════
+    // EXPORT: CARTÃO DE TRABALHO DIÁRIO (PDF)
+    // ═══════════════════════════════════════════════════
+    async function gerarPDFDia(dateStr) {
+      const trechosComMetas = [];
+      TRECHOS.forEach(t => {
+        let hasMeta = false;
+        t.atividades.forEach(at => {
+          if (plannedForDay(at, dateStr) > 0.05) hasMeta = true;
+        });
+        if (hasMeta) trechosComMetas.push(t.id);
+      });
+
+      if (trechosComMetas.length === 0) {
+        alert("Não há metas planejadas para este dia.");
+        return;
+      }
+
+      // Se houver mais de um trecho, confirma qual quer gerar ou gera todos
+      for (const tid of trechosComMetas) {
+        await gerarCartaoPDF(dateStr, tid);
+      }
+    }
+
+    async function gerarCartaoPDF(dateStr, trechoId) {
+      const t = TRECHOS.find(tr => tr.id === trechoId);
+      if (!t) return;
+
+      // Preenche Data
+      const d = new Date(dateStr + 'T12:00:00');
+      const meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+      document.getElementById('pdf-date').innerText = `${d.getDate()} de ${meses[d.getMonth()]}, ${d.getFullYear()}`;
+
+      // Busca metas do dia para este trecho
+      const metas = {
+        ras: 0, rgr: 0, // Remoção
+        esc: 0, roc: 0, // Escavação / Rocha
+        atu: 0, ipv: 0, // Tubo / PV
+        rea: 0          // Reaterro
+      };
+
+      t.atividades.forEach(at => {
+        const val = plannedForDay(at, dateStr);
+        if (val <= 0.05) return;
+
+        // Mapeamento por ID ou Nome
+        const nid = at.id.toUpperCase();
+        if (nid.includes('RAS')) metas.ras += val;
+        else if (nid.includes('RGR')) metas.rgr += val;
+        else if (nid.includes('ESC')) metas.esc += val;
+        else if (nid.includes('ROC')) metas.roc += val;
+        else if (nid.includes('ATU')) metas.atu += val;
+        else if (nid.includes('IPV')) metas.ipv += val;
+        else if (nid.includes('REA')) metas.rea += val;
+      });
+
+      // Atualiza IDs no template (Novo Design)
+      const f = (n, d = 1) => fmtNum(n, d);
+      document.getElementById('asfalto').innerText = f(metas.ras);
+      document.getElementById('granito').innerText = f(metas.rgr);
+      document.getElementById('escavacao').innerText = f(metas.esc);
+      document.getElementById('desmonte').innerText = f(metas.roc);
+      document.getElementById('tubo').innerText = f(metas.atu);
+      document.getElementById('pv').innerText = f(metas.ipv);
+      document.getElementById('reaterro').innerText = f(metas.rea);
+
+      // Resumo lateral
+      document.getElementById('resumo-asfalto').innerText = `${f(metas.ras + metas.rgr)} m²`;
+      document.getElementById('resumo-tubo').innerText = `${f(metas.atu)} m`;
+      document.getElementById('resumo-solo').innerText = `${f(metas.esc + metas.roc)} m³`;
+
+      // Título do PDF
+      const filename = `Cartao_Trabalho_T${trechoId}_${dateStr}.pdf`;
+
+      // Gera PDF usando html2pdf
+      const element = document.getElementById('pdf-tpl');
+      const opt = {
+        margin: 0,
+        filename: filename,
+        image: { type: 'jpeg', quality: 1.0 },
+        html2canvas: {
+          scale: 2,
+          useCORS: true,
+          letterRendering: true,
+          width: 1281,
+          height: 659
+        },
+        jsPDF: {
+          unit: 'px',
+          format: [1281, 659],
+          hotfixes: ['px_scaling']
+        }
+      };
+
+      // Exibe temporariamente para o html2pdf capturar corretamente
+      const ra = document.getElementById('pdf-render-area');
+      ra.style.left = '0';
+
+      try {
+        await html2pdf().set(opt).from(element).save();
+      } finally {
+        ra.style.left = '-9999px';
+      }
+    }
+
+
+    // ═══════════════════════════════════════════════════
+    // RENDER: RESUMO SEMANAL
+    // ═══════════════════════════════════════════════════
+    let lastAiSummary = null;
+    let lastAiSummaryDiarios = "";
+
+    // PRÉ-CARREGA o resumo estático imediatamente (portfólio)
+    function requestAISummary(textos) {
+      if (lastAiSummary) { updateAiSummaryUI(lastAiSummary); return; }
+      lastAiSummary = `🤖 _Resumo gerado automaticamente por modelo de linguagem (Gemini 2.5 Pro — Google DeepMind)._
+
+📌 *O que é o Resumo Inteligente de Ocorrências?*
+O Resumo Inteligente processa automaticamente os registros dos diários de obra da semana e utiliza inteligência artificial para sintetizar as principais ocorrências, produção realizada e eventos relevantes em linguagem natural — gerando um texto pronto para envio via WhatsApp para a equipe de gestão.
+
+📋 *Exemplo de resumo gerado — Semana 8 (27/04 a 30/04/2026):*
+Na última semana da obra, a equipe concluiu integralmente a reposição asfáltica dos três trechos do Emissário Leão Dourado. No dia 30/04, foram executados 141 m de reposição asfáltica no Trecho 2, encerrando todas as atividades de campo previstas no contrato. A semana foi marcada pela entrega final da obra dentro do prazo estipulado (30/04/2026), com progresso físico acumulado de 102,5%, superando a meta de 100,0%.
+
+✅ *Ocorrências e destaques registrados:*
+• 30/04: Finalização da reposição asfáltica — 141 m executados no Trecho 2. Obra concluída. (Fonte: Diário de Obra)
+• 12/03: Incidência de rocha no Trecho 1 — necessário desmonte com compressor e massa expansiva. Sem impacto no prazo. (Fonte: Diário de Obra)
+
+_Resumo gerado em 30/04/2026 · IDP Global: 1,03 · Viana &amp; Moura Construções._`;
+      updateAiSummaryUI(lastAiSummary);
+    }
+
+    function updateAiSummaryUI(text) {
+      const el = document.getElementById('aiSummaryBox');
+      if (el) el.innerHTML = `<em>${text}</em>`;
+    }
+
+    function renderResumo() {
+      const inputEl = document.getElementById('resumoDate');
+      let baseDate = new Date(today);
+
+      if (inputEl && inputEl.value) {
+        baseDate = new Date(inputEl.value + 'T00:00:00');
+        const dayNameEl = document.getElementById('resumoDayName');
+        if (dayNameEl) dayNameEl.textContent = DAY_PT[baseDate.getDay()];
+      } else if (inputEl) {
+        inputEl.value = fd(today);
+        const dayNameEl = document.getElementById('resumoDayName');
+        if (dayNameEl) dayNameEl.textContent = DAY_PT[today.getDay()];
+      }
+
+      const mon = getWeekMon(baseDate);
+      const fri = new Date(mon); fri.setDate(mon.getDate() + 5);
+      const wn = getWeekNum(baseDate);
+      const ov = overallKPIs(baseDate);
+
+      const lines = [];
+      const formatDDMM = (d) => `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}`;
+      const formatDDMMYYYY = (d) => `${formatDDMM(d)}/${d.getFullYear()}`;
+      const title = resumoSel === 'all' ? 'Resumo Geral' : `Resumo Trecho ${resumoSel}`;
+      lines.push(`📊 ${title} - ${formatDDMMYYYY(baseDate)}`);
+      lines.push(``);
+      lines.push(`🗓 Semana ${wn}`);
+      lines.push(`${formatDDMM(mon)} → ${formatDDMM(fri)}`);
+      lines.push(``);
+      lines.push(`━━━━━━━━━━━━━━`);
+      lines.push(``);
+
+      // Calcula ATU (Assentamento) e ASF (Asfalto) — listas separadas
+      let atuReal = 0, atuPrev = 0, atuTot = 0;
+      let asfReal = 0, asfPrev = 0, asfTot = 0;
+      let atuDetLines = [];
+      let asfDetLines = [];
+
+      const buildStatus = (real, total, prev, unit) => {
+        const d = real - prev;
+        const em = d >= 0 ? '🟩' : (d >= -10 ? '🟨' : '🟥');
+        if (real >= total) return `(✔️ Finalizado) ${em}`;
+        return (d >= 0 ? `(🔼 ➕${Math.round(d)}${unit})` : `(🔻 ${Math.round(d)}${unit})`) + ` ${em}`;
+      };
+
+      if (resumoSel === 'all') {
+        TRECHOS.forEach(t => {
+          const atu = t.atividades.find(at => at.id && at.id.includes('ATU'));
+          const asf = t.atividades.find(at => at.id && (at.id.includes('REPAS') || at.id.includes('RAS')));
+          if (atu) {
+            const r = actualTotal(atu.id, baseDate), p = plannedToDate(atu, baseDate);
+            atuReal += r; atuPrev += p; atuTot += atu.total;
+            atuDetLines.push(`     ↳ T${t.id}: ${Math.round(r)}m / ${Math.round(atu.total)}m ${buildStatus(r, atu.total, p, 'm')}`);
+          }
+          if (asf) {
+            const r = actualTotal(asf.id, baseDate), p = plannedToDate(asf, baseDate);
+            asfReal += r; asfPrev += p; asfTot += asf.total;
+            asfDetLines.push(`     ↳ T${t.id}: ${Math.round(r)}m² / ${Math.round(asf.total)}m² ${buildStatus(r, asf.total, p, 'm²')}`);
+          }
+        });
+      } else {
+        const t = TRECHOS.find(tr => tr.id.toString() === resumoSel.toString());
+        if (t) {
+          const atu = t.atividades.find(at => at.id && at.id.includes('ATU'));
+          if (atu) { atuReal = actualTotal(atu.id, baseDate); atuPrev = plannedToDate(atu, baseDate); atuTot = atu.total; }
+          const asf = t.atividades.find(at => at.id && (at.id.includes('REPAS') || at.id.includes('RAS')));
+          if (asf) { asfReal = actualTotal(asf.id, baseDate); asfPrev = plannedToDate(asf, baseDate); asfTot = asf.total; }
+        }
+      }
+
+      const dAtu = atuReal - atuPrev;
+      const dAsf = asfReal - asfPrev;
+
+      if (resumoSel === 'all') {
+        const emAtu = dAtu >= 0 ? '🟩' : (dAtu >= -10 ? '🟨' : '🟥');
+        const emAsf = dAsf >= 0 ? '🟩' : (dAsf >= -10 ? '🟨' : '🟥');
+
+        lines.push(`📈 PROGRESSO GERAL DA OBRA`);
+        lines.push(``);
+        lines.push(`▸ Previsto: ${fmtPct(ov.pP)}`);
+        lines.push(`   Realizado: ${fmtPct(ov.pA)}`);
+
+        lines.push(`   ▸ Assentamento (Total): ${Math.round(atuReal)}m / ${Math.round(atuTot)}m (${dAtu >= 0 ? '🔼 ➕' : '🔻 '}${Math.round(dAtu)}m) ${emAtu}`);
+        atuDetLines.forEach(l => lines.push(l));
+        lines.push(``);
+
+        lines.push(`   ▸ Rep. Asfáltica (Total): ${Math.round(asfReal)}m² / ${Math.round(asfTot)}m² (${dAsf >= 0 ? '🔼 ➕' : '🔻 '}${Math.round(dAsf)}m²) ${emAsf}`);
+        asfDetLines.forEach(l => lines.push(l));
+        lines.push(``);
+
+        const idpStatus = ov.idp >= 0.95 ? 'no prazo' : ov.idp >= 0.80 ? 'atenção' : 'atrasado';
+        const idpEmoji = ov.idp >= 0.95 ? '🟩' : ov.idp >= 0.80 ? '🟨' : '🟥';
+        lines.push(`▸ IDP Global: ${fmtNum(ov.idp, 2)} (${idpStatus}) ${idpEmoji}`);
+        lines.push(``);
+        lines.push(`▸ Prazo Limite: 30/04/2026 (restam ${ov.wdLeft} d.ú.)`);
+        lines.push(`▸ Fim Planejado (Plano): ${ptDate(ov.planEndDate)} (restam ${ov.wdLeftPlan} d.ú.)`);
+        lines.push(``);
+        lines.push(`🏆 METAS TOTAIS DA SEMANA`);
+        lines.push(``);
+        const metas = {};
+        TRECHOS.forEach(t => {
+          t.atividades.forEach(at => {
+            const pw = plannedForWeek(at, mon, fri);
+            const aw = actualForWeek(at.id, mon, fri);
+            if (pw > 0.05 || aw > 0) {
+              if (!metas[at.nome]) metas[at.nome] = { p: 0, a: 0, un: at.un };
+              metas[at.nome].p += pw;
+              metas[at.nome].a += aw;
+            }
+          });
+        });
+        Object.keys(metas).forEach(n => {
+          const m = metas[n];
+          const icon = m.a >= m.p * 0.9 ? '✅' : m.a > 0 ? '⚠️' : '○';
+          lines.push(`  ${icon} ${n}:`);
+          lines.push(`${fmtNum(m.a, 1)} / ${fmtNum(m.p, 1)} ${m.un}`);
+          lines.push(``);
+        });
+      } else {
+        const t = TRECHOS.find(tr => tr.id.toString() === resumoSel.toString());
+        if (t) {
+          const k = trechoKPIs(t, baseDate);
+          lines.push(`📈 STATUS TRECHO ${t.id}`);
+          lines.push(``);
+          lines.push(`▸ Previsto: ${fmtPct(k.pP)}`);
+          lines.push(`   Realizado: ${fmtPct(k.pA)}`);
+          lines.push(``);
+          const idpStatus = k.idp >= 0.95 ? 'no prazo' : k.idp >= 0.80 ? 'atenção' : 'atrasado';
+          const idpEmoji = k.idp >= 0.95 ? '🟩' : k.idp >= 0.80 ? '🟨' : '🟥';
+          lines.push(`▸ IDP: ${fmtNum(k.idp, 2)} (${idpStatus}) ${idpEmoji}`);
+          lines.push(``);
+          lines.push(`▸ Prazo Limite: ${ptDate(k.trechoDeadline)} (restam ${countWD(today, k.trechoDeadline)} d.ú.)`);
+          lines.push(``);
+          lines.push(`🏆 PRODUÇÃO NA SEMANA`);
+          lines.push(``);
+          t.atividades.forEach(at => {
+            const pw = plannedForWeek(at, mon, fri);
+            const aw = actualForWeek(at.id, mon, fri);
+            if (pw > 0.05 || aw > 0) {
+              const icon = aw >= pw * 0.9 ? '✅' : aw > 0 ? '⚠️' : '○';
+              lines.push(`  ${icon} ${at.nome}:`);
+              lines.push(`${fmtNum(aw, 1)} / ${fmtNum(pw, 1)} ${at.un}`);
+              lines.push(``);
+            }
+          });
+        }
+      }
+
+      // DIÁRIOS DA SEMANA
+      const diariosSemana = DIARIOS.filter(d => d.data >= fd(mon) && d.data <= fd(fri) && d.texto.trim() !== "");
+      lines.push(`📝 *RESUMO INTELIGENTE DAS OCORRÊNCIAS*`);
+
+      if (diariosSemana.length > 0) {
+        requestAISummary(diariosSemana.map(d => d.texto));
+        lines.push(lastAiSummary || '');
+      } else {
+        lines.push(`_Nenhum diário registrado nesta semana até o momento._`);
+      }
+      lines.push(``);
+
+
+      lines.push(`_Gerado em ${ptDate(today)} · Viana & Moura Construções_`);
+
+      const plain = lines.join('\n');
+      const styled = plain
+        .replace(/\*(.*?)\*/g, '<strong>$1</strong>')
+        .replace(/_(.*?)_/g, '<em>$1</em>')
+        .replace(/━/g, '<span style="color:var(--vmc-red)">━</span>')
+        .replace(/✨ _Gerando resumo automático..._/g, '<span id="aiSummaryBox">✨ <em>Gerando resumo inteligente com IA...</em></span>');
+
+      document.getElementById('resumoContent').innerHTML = `
+    <div style="font-size:.72rem;color:var(--vmc-gray);margin-bottom:8px">Visualizando: ${resumoSel === 'all' ? 'Obra Completa' : `Trecho ${resumoSel}`}</div>
+    <div class="resumo-box">${styled}</div>
+    <button class="copy-btn" onclick="copyResumo()">📋 Copiar Resumo para WhatsApp</button>`;
+      document.getElementById('resumoContent').dataset.plain = plain;
+    }
+
+    function copyResumo() {
+      const txt = document.getElementById('resumoContent').dataset.plain;
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(txt).then(() => showToast('✓ Resumo Copiado!')).catch(() => fallbackCopy(txt));
+      } else { fallbackCopy(txt); }
+    }
+    function fallbackCopy(txt) {
+      const ta = document.createElement('textarea');
+      ta.value = txt; document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); showToast('✓ Copiado!'); } catch (e) { showToast('Erro ao copiar'); }
+      document.body.removeChild(ta);
+    }
+    let map = null;
+    const MAP_COORDS = {
+      center: [-8.2861, -35.9960], // Ponto central aproximado do traçado real
+      t1: [
+        [-8.2856005, -35.9996725],
+        [-8.2858181, -35.9982589],
+        [-8.2860145, -35.9969527],
+        [-8.2860942, -35.9962783],
+        [-8.2861526, -35.9960369]
+      ],
+      t2: [
+        [-8.2861526, -35.9960369],
+        [-8.2863823, -35.9951082],
+        [-8.2865827, -35.9940473],
+        [-8.286673, -35.9940259]
+      ],
+      t3: [
+        [-8.2855832, -36.0000898],
+        [-8.2855792, -35.9999048],
+        [-8.2855892, -35.9997177],
+        [-8.2856005, -35.9996725]
+      ]
+    };
+
+    function renderMapa() {
+      if (map) {
+        setTimeout(() => map.invalidateSize(), 100);
+        drawMapData();
+        return;
+      }
+
+      // Inicializar Mapa
+      map = L.map('mapContent', {
+        center: MAP_COORDS.center,
+        zoom: 15,
+        zoomControl: false
+      });
+
+      // Camada Satélite Esri
+      L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri'
+      }).addTo(map);
+
+      // Camada de Ruas (sobreposta leve se quiser)
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        opacity: 0.3
+      }).addTo(map);
+
+      L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+      drawMapData();
+    }
+
+    let mapLayers = [];
+    function drawMapData() {
+      // Limpar camadas anteriores
+      mapLayers.forEach(l => l.remove());
+      mapLayers = [];
+
+      const trechosData = [
+        { coords: MAP_COORDS.t1, kpi: trechoKPIs(TRECHOS[0]), label: 'Trecho 1' },
+        { coords: MAP_COORDS.t2, kpi: trechoKPIs(TRECHOS[1]), label: 'Trecho 2' },
+        { coords: MAP_COORDS.t3, kpi: trechoKPIs(TRECHOS[2]), label: 'Trecho 3' }
+      ];
+
+      trechosData.forEach((td, idx) => {
+        const k = td.kpi;
+        const points = td.coords;
+
+        // 1. Desenhar fundo (total)
+        const bg = L.polyline(points, {
+          color: '#f1f5f9',
+          weight: 12,
+          opacity: 0.8,
+          lineCap: 'round'
+        }).addTo(map);
+        mapLayers.push(bg);
+
+        // 2. Desenhar planejado (opcional: um pouco mais claro que o realizado)
+        const pP = Math.min(k.pP, 1);
+        if (pP > 0) {
+          const planPoints = getPartialPath(points, pP);
+          const plan = L.polyline(planPoints, {
+            color: '#f0b840', // Cor Planejado (Dourado/Laranja claro)
+            weight: 12,
+            opacity: 0.6,
+            lineCap: 'round'
+          }).addTo(map);
+          mapLayers.push(plan);
+        }
+
+        // 3. Desenhar realizado (preenchimento proporcional)
+        const pA = Math.min(k.pA, 1);
+        if (pA > 0) {
+          // Calcula o sub-segmento das coordenadas baseado no progresso
+          const subPoints = getPartialPath(points, pA);
+          const real = L.polyline(subPoints, {
+            color: '#8B1A1A', // Cor Realizado (V&M Red)
+            weight: 12,
+            opacity: 1,
+            lineCap: 'round'
+          }).addTo(map);
+
+          real.on('click', () => {
+            document.getElementById('mapInfo').innerHTML = `<strong>${td.label}</strong><br>${fmtPct(k.pA)} concluído<br>${fmtNum(k.atuReal, 0)}m de ${fmtNum(k.atuTotal, 0)}m`;
+          });
+          mapLayers.push(real);
+        }
+
+        // Marcadores de início/fim
+        if (idx === 0) {
+          const startMark = L.circleMarker(points[0], { radius: 6, color: '#8B1A1A', fillColor: '#fff', fillOpacity: 1, weight: 3 }).addTo(map);
+          mapLayers.push(startMark);
+        }
+        const endMark = L.circleMarker(points[points.length - 1], { radius: 6, color: '#8B1A1A', fillColor: '#fff', fillOpacity: 1, weight: 3 }).addTo(map);
+        endMark.bindTooltip(td.label, { permanent: true, direction: 'right', className: 'map-tooltip' });
+        mapLayers.push(endMark);
+      });
+    }
+
+    function getPartialPath(points, pct) {
+      if (pct >= 1) return points;
+      if (pct <= 0) return [points[0]];
+
+      let totalDist = 0;
+      for (let i = 0; i < points.length - 1; i++) {
+        totalDist += L.latLng(points[i]).distanceTo(L.latLng(points[i + 1]));
+      }
+
+      let targetDist = totalDist * pct;
+      let currentDist = 0;
+      let newPoints = [points[0]];
+
+      for (let i = 0; i < points.length - 1; i++) {
+        let p1 = L.latLng(points[i]);
+        let p2 = L.latLng(points[i + 1]);
+        let d = p1.distanceTo(p2);
+
+        if (currentDist + d <= targetDist) {
+          newPoints.push(points[i + 1]);
+          currentDist += d;
+        } else {
+          let remaining = targetDist - currentDist;
+          let ratio = remaining / d;
+          let lat = p1.lat + (p2.lat - p1.lat) * ratio;
+          let lng = p1.lng + (p2.lng - p1.lng) * ratio;
+          newPoints.push([lat, lng]);
+          break;
+        }
+      }
+      return newPoints;
+    }
+
+    function goTrecho(id) {
+      selT = id;
+      go('lancar');
+    }
+
+    // ═══════════════════════════════════════════════════
+    // DEMO DATA
+    // ═══════════════════════════════════════════════════
+    async function loadDemo() {
+      const btn = document.querySelector('.demo-btn');
+      const originalText = btn.innerHTML;
+      btn.textContent = '⏳ Sincronizando...';
+
+      try {
+        const res = await fetch('/api/sync-excel', { method: 'POST' });
+        const data = await res.json();
+        if (data.error) throw new Error(data.error);
+        showToast(`✓ ${data.registros_afetados} registros sincronizados! Atualizando painel...`);
+
+        await loadState();
+        renderDash();
+        renderLancar();
+        renderGantt();
+        renderCron();
+        renderResumo();
+      } catch (e) {
+        showToast('❌ Erro: ' + e.message);
+      }
+
+      btn.innerHTML = originalText;
+    }
+
+    async function syncToExcel() {
+      const btns = document.querySelectorAll('.demo-btn');
+      const btn = btns[1]; // Segundo botão
+      const originalText = btn.innerHTML;
+      btn.textContent = '⏳ Gravando no Excel...';
+
+      try {
+        const res = await fetch('/api/sync-to-excel', { method: 'POST' });
+        const data = await res.json();
+        if (data.error) throw new Error(data.error);
+        showToast(`✅ Excel atualizado com sucesso! (${data.celulas_afetadas} células alteradas)`);
+      } catch (e) {
+        showToast('❌ Erro na gravação: ' + e.message);
+      }
+
+      btn.innerHTML = originalText;
+    }
+
+    async function renderDiario() {
+      const date = document.getElementById('inputDate').value;
+      document.getElementById('diarioDatePicker').value = date;
+      const d = new Date(date + 'T00:00:00');
+      document.getElementById('diarioDateHdr').textContent = `Relato para o dia ${ptDate(d)}`;
+      document.getElementById('diarioText').value = "Carregando...";
+
+      try {
+        const res = await fetch(`/api/diario?data=${date}`);
+        const data = await res.json();
+        document.getElementById('diarioText').value = data.texto || "";
+        renderHistoricoDiario(); // Atualiza a lista sempre que renderiza a tela
+      } catch (e) {
+        document.getElementById('diarioText').value = "";
+      }
+    }
+
+    function renderHistoricoDiario() {
+      const container = document.getElementById('diarioHistory');
+      if (!container) return;
+
+      // Ordenar decrescente por data para mostrar os mais recentes primeiro
+      const logs = [...DIARIOS].sort((a, b) => b.data.localeCompare(a.data));
+
+      if (logs.length === 0) {
+        container.innerHTML = '<div style="text-align:center;color:var(--vmc-gray);font-size:0.82rem;padding:30px;background:var(--vmc-bg2);border-radius:12px;margin-top:10px">Nenhum relato anterior encontrado.</div>';
+        return;
+      }
+
+      let html = '<div style="font-size:0.75rem;color:var(--vmc-gray);margin-bottom:12px;text-transform:uppercase;letter-spacing:1.2px;font-weight:800;display:flex;align-items:center;gap:8px">📜 Histórico de Relatos</div>';
+      logs.forEach((log, idx) => {
+        const d = new Date(log.data + 'T00:00:00');
+        html += `
+      <div class="hist-item" id="hist-${idx}">
+        <div class="hist-hdr" onclick="toggleHist(${idx})">
+          <span>📅 ${ptDate(d)}</span>
+          <span id="icon-${idx}" style="font-size:0.7rem;opacity:0.5">▼ expandir</span>
+        </div>
+        <div class="hist-body">
+          <div style="margin-bottom:12px">${log.texto}</div>
+          <button class="demo-btn" style="margin:0;padding:5px 12px;font-size:0.7rem;background:var(--vmc-bg);border-color:var(--vmc-border)" onclick="prepareEditDiario('${log.data}')">✏️ Editar Relato</button>
+        </div>
+      </div>
+    `;
+      });
+      container.innerHTML = html;
+    }
+
+    function toggleHist(idx) {
+      const el = document.getElementById(`hist-${idx}`);
+      const icon = document.getElementById(`icon-${idx}`);
+      const isOpen = el.classList.contains('open');
+
+      if (isOpen) {
+        el.classList.remove('open');
+        icon.innerHTML = '▼ expandir';
+      } else {
+        el.classList.add('open');
+        icon.innerHTML = '▲ recolher';
+      }
+    }
+
+    function prepareEditDiario(dateStr) {
+      const di = document.getElementById('diarioDatePicker');
+      if (di) {
+        di.value = dateStr;
+        syncDiarioDate(dateStr);
+        // Rolar suavemente para o topo do card de lançamento
+        document.getElementById('scr-diario').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        showToast("📝 Relato carregado para edição");
+      }
+    }
+
+    async function saveDiario() {
+      const date = document.getElementById('inputDate').value;
+      const texto = document.getElementById('diarioText').value;
+      try {
+        const res = await fetch('/api/diario', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ data: date, texto })
+        });
+
+        const contentType = res.headers.get("content-type");
+        if (!res.ok || !contentType || !contentType.includes("application/json")) {
+          const text = await res.text();
+          console.error("Resposta não-JSON:", text);
+          throw new Error("O servidor não respondeu com JSON. Certifique-se de que reiniciou o servidor local (npm start) após as atualizações de hoje.");
+        }
+
+        const data = await res.json();
+        if (data.success) {
+          showToast("✓ Diário salvo!");
+          const idx = DIARIOS.findIndex(d => d.data === date);
+          if (idx >= 0) DIARIOS[idx].texto = texto;
+          else DIARIOS.push({ data: date, texto });
+          renderHistoricoDiario();
+        }
+        else throw new Error(data.error);
+      } catch (e) {
+        showToast("❌ Erro ao salvar: " + e.message);
+        console.error(e);
+      }
+    }
+
+    function syncDiarioDate(val) {
+      document.getElementById('inputDate').value = val;
+      renderDiario();
+    }
+
+    let DIARIOS = [];
+
+    // ═══════════════════════════════════════════════════
+    // H-H VISUALIZATION
+    // ═══════════════════════════════════════════════════
+    async function syncHH() {
+      showToast("⏳ Sincronizando Planejamento H-H...");
+      try {
+        const res = await fetch('/api/sync-hh', { method: 'POST' });
+        const data = await res.json();
+        if (data.error) {
+          if (data.error.includes('equipes_hh') && data.error.includes('relation')) {
+            throw new Error("A tabela 'equipes_hh' não foi encontrada no banco. Por favor, certifique-se de que ela existe no seu Supabase.");
+          }
+          throw new Error(data.error);
+        }
+        showToast(`✅ ${data.registros_afetados} registros H-H sincronizados!`);
+        if (document.getElementById('scr-hh').classList.contains('act')) renderHH();
+      } catch (e) {
+        showToast("❌ Erro H-H: " + e.message);
+      }
+    }
+
+    async function renderHH() {
+      const container = document.getElementById('hhContent');
+      const dateInput = document.getElementById('hhDate');
+      const dayNameEl = document.getElementById('hhDayName');
+
+      if (!dateInput.value) dateInput.value = fd(today);
+      const selDate = dateInput.value;
+      const d = new Date(selDate + 'T00:00:00');
+      dayNameEl.textContent = DAY_PT[d.getDay()];
+
+      container.innerHTML = '<div style="text-align:center;padding:40px;color:var(--vmc-gray)">⌛ Carregando distribuição de pessoal...</div>';
+
+      try {
+        const res = await fetch(`/api/hh-data?data=${selDate}`);
+        const rows = await res.json();
+
+        if (rows.error || !Array.isArray(rows)) {
+          const errorMsg = rows.error || (typeof rows === 'string' ? rows : JSON.stringify(rows));
+          throw new Error(errorMsg);
+        }
+
+        if (rows.length === 0) {
+          container.innerHTML = `
+        <div style="text-align:center;padding:40px;background:#fff;border-radius:12px;box-shadow:var(--sh)">
+          <div style="font-size:3rem;margin-bottom:10px">📅</div>
+          <div style="font-weight:700;color:var(--vmc-ink)">Sem planejamento H-H para este dia.</div>
+          <div style="font-size:0.8rem;color:var(--vmc-gray);margin-top:5px">Verifique se os dados foram sincronizados ou mude a data.</div>
+        </div>`;
+          return;
+        }
+
+        // Filtrar apenas Planejado por enquanto ou agrupar?
+        // Vamos agrupar por atividade/trecho e mostrar apenas uma linha por serviço (podemos mostrar P e R depois)
+        const grouped = {};
+        rows.forEach(r => {
+          const key = `${r.trecho_id}|${r.atividade}`;
+          if (!grouped[key]) grouped[key] = { trecho: r.trecho_id, atividade: r.atividade, p: null, r: null };
+          if (r.tipo === 'Planejado') grouped[key].p = r;
+          else if (r.tipo === 'Realizado') grouped[key].r = r;
+        });
+
+        const hours = Array.from({ length: 16 }, (_, i) => (i + 6).toString().padStart(2, '0'));
+
+        let html = `<div class="hh-grid-wrap"><table class="hh-table"><thead><tr><th class="act-col">Serviço / Trecho</th>`;
+        hours.forEach(h => html += `<th>${h}h</th>`);
+        html += `</tr></thead><tbody>`;
+
+        const totals = Array(16).fill(0);
+
+        Object.values(grouped).forEach(item => {
+          const data = item.p || item.r;
+          if (!data) return;
+
+          const label = item.trecho === '-' ? item.atividade : `T${item.trecho}: ${item.atividade}`;
+          html += `<tr><td class="act-col">${label}</td>`;
+
+          hours.forEach((h, idx) => {
+            const val = Number(data[`h${h}`]) || 0;
+            totals[idx] += val;
+            let cls = 'hh-cell';
+            if (val === 0) cls += ' val-0';
+            else if (val <= 3) cls += ' val-low';
+            else if (val <= 7) cls += ' val-mid';
+            else cls += ' val-high';
+
+            html += `<td class="${cls}">${val > 0 ? val : '-'}</td>`;
+          });
+          html += `</tr>`;
+        });
+
+        // Linha de Totais
+        html += `<tr class="hh-total-row"><td class="act-col">TOTAL PESSOAL EM CAMPO</td>`;
+        totals.forEach(val => {
+          html += `<td>${val}</td>`;
+        });
+        html += `</tr></tbody></table></div>`;
+
+        container.innerHTML = html;
+
+      } catch (e) {
+        container.innerHTML = `<div class="alert dan"><div class="alert-ico">⚠️</div><div><div class="alert-t">Erro ao carregar dados</div><div class="alert-b">${e.message}</div></div></div>`;
+      }
+    }
+
+    // ═══════════════════════════════════════════════════
+    // NAVEGAÇÃO
+    // ═══════════════════════════════════════════════════
+    function go(name) {
+      document.querySelectorAll('.scr').forEach(s => s.classList.remove('act'));
+      document.querySelectorAll('.bn').forEach(b => b.classList.remove('act'));
+      document.getElementById('scr-' + name).classList.add('act');
+      const idx = ['dashboard', 'hh', 'cronograma', 'gantt', 'mapa', 'scurve', 'resumo', 'lancar', 'diario'].indexOf(name);
+      if (idx >= 0) document.querySelectorAll('.bn')[idx].classList.add('act');
+      const renders = { dashboard: renderDash, hh: renderHH, lancar: renderLancar, gantt: renderGantt, cronograma: renderCron, mapa: renderMapa, scurve: renderScurve, diario: renderDiario, resumo: renderResumo };
+      if (renders[name]) renders[name]();
+      window.scrollTo(0, 0);
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg; t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2600);
+    }
+
+    // ═══════════════════════════════════════════════════
+    // INIT
+    // ═══════════════════════════════════════════════════
+    async function init() {
+      await loadState();
+      const di = document.getElementById('inputDate');
+      di.value = fd(today);
+      di.addEventListener('change', renderLancar);
+
+      const hhDate = document.getElementById('hhDate');
+      if (hhDate) hhDate.value = fd(today);
+
+      document.getElementById('hdrDate').textContent = `${DAY_PT[today.getDay()]}, ${ptDate(today)}`;
+      const mon = getWeekMon(today), fri = new Date(mon); fri.setDate(mon.getDate() + 5);
+      document.getElementById('hdrWeek').textContent = `Semana ${getWeekNum(today)} · ${ptDate(mon)}–${ptDate(fri)}`;
+      renderDash();
+      renderLancar();
+    }
+
+    init();
+  </script>
+  <!-- DIÁRIO -->
+  <div class="scr" id="scr-diario">
+    <div class="sec-title">📝 Diário de Obra</div>
+    <div class="ov-card" style="padding:20px">
+      <div style="margin-bottom:15px">
+        <label style="font-size:0.8rem;color:var(--vmc-gray);display:block;margin-bottom:5px">Selecione o Dia:</label>
+        <input type="date" id="diarioDatePicker"
+          style="width:100%;padding:10px;border:1px solid #e2e8f0;border-radius:8px;font-family:inherit"
+          onchange="syncDiarioDate(this.value)">
+      </div>
+      <div style="font-size:0.9rem;font-weight:600;color:var(--vmc-ink);margin-bottom:10px" id="diarioDateHdr"></div>
+      <textarea id="diarioText"
+        style="width:100%;height:300px;border:1px solid #e2e8f0;border-radius:8px;padding:12px;font-family:inherit;font-size:0.9rem;resize:none"
+        placeholder="Digite aqui o relato das ocorrências do dia..."></textarea>
+      <button class="btn-confirm" style="width:100%;margin-top:15px" onclick="saveDiario()">💾 Salvar Relato do
+        Dia</button>
+    </div>
+    <div class="diario-hist" id="diarioHistory"></div>
+  </div>
+
+  <!-- Modal de Confirmação -->
+  <div id="confirmModal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-hdr">
+        <h3>Confirmar Lançamento</h3>
+      </div>
+      <div class="modal-body">
+        <div class="summary-date" id="confirmDate">--/--/----</div>
+        <div id="confirmList"></div>
+        <p style="font-size:0.75rem;color:var(--vmc-gray);margin-top:15px;line-height:1.4">
+          📌 Os valores informados serão salvos no banco de dados. Valores negativos serão subtraídos do total
+          acumulado.
+        </p>
+      </div>
+      <div class="modal-ftr">
+        <button class="btn-cancel" onclick="hideModal('confirmModal')">Cancelar</button>
+        <button class="btn-confirm" onclick="executeSave()">Confirmar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Sucesso -->
+  <div id="successModal" class="modal-overlay">
+    <div class="modal-card">
+      <div style="padding:30px;text-align:center">
+        <div style="font-size:3rem;margin-bottom:15px">✅</div>
+        <h3 style="color:var(--vmc-ink);margin:0 0 10px 0">Salvo com Sucesso!</h3>
+        <p style="color:var(--vmc-gray);font-size:0.9rem;margin-bottom:20px" id="successMsg"></p>
+        <button class="btn-confirm" style="width:100%" onclick="hideModal('successModal')">Entendido</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════
+     BLOCO IA — Botão flutuante + Modal de Análise IA
+     ════════════════════════════════════════════════════ -->
+
+  <!-- BOTÃO FLUTUANTE — abre a análise IA -->
+  <button id="btn-ia" onclick="abrirModalIA()" title="Análise IA da Obra"
+    aria-label="Abrir análise inteligente da obra">
+    🤖
+    <span>Análise IA</span>
+  </button>
+
+  <!-- MODAL DE INSIGHT — exibe resultado da IA -->
+  <!-- MODAL DE INSIGHT — agora com identidade visual clara (creme/vermelho) -->
+  <div id="modal-ia" class="ia-overlay" style="display:none" role="dialog" aria-modal="true"
+    aria-label="Análise Inteligente da Obra">
+    <div class="ia-modal">
+      <div class="ia-header">
+        <div style="display:flex;align-items:center;gap:10px">
+          <span style="font-size:1.4rem">🤖</span>
+          <span>Análise Inteligente da Obra</span>
+        </div>
+        <button onclick="fecharModalIA()" class="ia-close" aria-label="Fechar modal">✕</button>
+      </div>
+      <div id="ia-conteudo" class="ia-body">
+        <!-- Preenchido via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* ── Tooltips de KPI ── */
+    .kpi-side {
+      position: relative;
+      cursor: help;
+    }
+
+    .kpi-side:hover .tooltip-box {
+      display: block;
+    }
+
+    .tooltip-box {
+      display: none;
+      position: absolute;
+      bottom: 115%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #FFFEF9;
+      border: 1.5px solid var(--vmc-ink);
+      border-radius: 12px;
+      padding: 14px;
+      width: 240px;
+      z-index: 1000;
+      box-shadow: var(--sh-lg);
+      text-align: left;
+      font-size: 0.78rem;
+      color: var(--vmc-dark);
+      pointer-events: none;
+      animation: popIn 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .tooltip-box::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -8px;
+      border-width: 8px;
+      border-style: solid;
+      border-color: var(--vmc-ink) transparent transparent transparent;
+    }
+
+    .tooltip-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: var(--vmc-red);
+      margin-bottom: 8px;
+      font-size: 0.85rem;
+      display: block;
+      border-bottom: 2px solid var(--vmc-bg);
+      padding-bottom: 5px;
+    }
+
+    /* Mini Calendário */
+    .mini-cal-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 3px;
+      margin-top: 8px;
+    }
+
+    .mini-cal-day {
+      font-size: 0.58rem;
+      text-align: center;
+      padding: 4px 0;
+      border-radius: 4px;
+      background: rgba(0, 0, 0, 0.03);
+      color: #9ca3af;
+    }
+
+    .mini-cal-day.wd {
+      background: var(--vmc-bg);
+      color: var(--vmc-dark);
+    }
+
+    .mini-cal-day.sel {
+      background: var(--vmc-red);
+      color: #fff;
+      font-weight: 700;
+      box-shadow: 0 1px 3px rgba(139, 26, 26, 0.3);
+    }
+
+    .mini-cal-day.today {
+      border: 1.5px solid var(--vmc-gold);
+      color: var(--vmc-ink);
+      font-weight: 700;
+    }
+
+    .mini-cal-dow {
+      font-size: 0.5rem;
+      text-transform: uppercase;
+      text-align: center;
+      color: var(--vmc-gray-l);
+      margin-bottom: 4px;
+    }
+
+    .mini-cal-month {
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--vmc-dark);
+      margin: 6px 0 3px;
+      border-top: 1px solid #f1eeeb;
+      padding-top: 6px;
+    }
+
+    /* ── Botão flutuante IA ── */
+    #btn-ia {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      z-index: 9999;
+      background: var(--vmc-ink);
+      color: #F0EAD8;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 18px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 16px rgba(139, 26, 26, 0.45);
+      transition: all 0.2s;
+      font-family: 'Playfair Display', serif;
+    }
+
+    #btn-ia:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 25px rgba(139, 26, 26, 0.55);
+    }
+
+    /* ── Overlay do modal ── */
+    .ia-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      background: rgba(41, 37, 36, 0.5);
+      /* Mais suave */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      backdrop-filter: blur(5px);
+    }
+
+    /* ── Modal principal (Identidade Visual Padrão) ── */
+    .ia-modal {
+      background: var(--vmc-bg);
+      /* Creme #EDEAE3 */
+      border: 2px solid var(--vmc-gold);
+      border-radius: 16px;
+      width: 100%;
+      max-width: 650px;
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .ia-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      background: var(--vmc-red);
+      /* Vermelho Escuro */
+      border-bottom: 3px solid var(--vmc-gold);
+      color: #F8F7F4;
+      font-weight: 700;
+      font-size: 1.1rem;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .ia-close {
+      background: rgba(255, 255, 255, 0.15);
+      border: none;
+      color: #fff;
+      font-size: 1.2rem;
+      cursor: pointer;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .ia-close:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: rotate(90deg);
+    }
+
+    .ia-body {
+      padding: 25px;
+      overflow-y: auto;
+      color: var(--vmc-dark);
+      font-size: 1rem;
+      line-height: 1.8;
+      flex: 1;
+      font-family: 'Crimson Pro', serif;
+      background: #FFFEFB;
+      /* Fundo papel para leitura */
+    }
+
+    /* ── Markdown no IA Body ── */
+    .ia-body strong {
+      color: var(--vmc-red);
+      font-weight: 700;
+    }
+
+    .ia-body h1,
+    .ia-body h2,
+    .ia-body h3 {
+      color: var(--vmc-red);
+      font-family: 'Playfair Display', serif;
+      margin-top: 1.5rem;
+      margin-bottom: 0.8rem;
+      border-left: 4px solid var(--vmc-gold);
+      padding-left: 12px;
+    }
+
+    .ia-body h3 {
+      font-size: 1.15rem;
+    }
+
+    .ia-body p {
+      margin-bottom: 1.2rem;
+    }
+
+    .ia-body ul {
+      margin-bottom: 1.2rem;
+      padding-left: 20px;
+      list-style-type: none;
+    }
+
+    .ia-body li {
+      position: relative;
+      margin-bottom: 8px;
+    }
+
+    .ia-body li::before {
+      content: '•';
+      color: var(--vmc-gold);
+      font-weight: bold;
+      position: absolute;
+      left: -15px;
+    }
+
+    /* ── Estados ── */
+    .ia-loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 60px 20px;
+      color: var(--vmc-red);
+      font-weight: 600;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .ia-spinner {
+      width: 48px;
+      height: 48px;
+      border: 4px solid #EFEBE3;
+      border-top-color: var(--vmc-red);
+      border-radius: 50%;
+      animation: iaSpin 1s linear infinite;
+    }
+
+    @keyframes iaSpin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .ia-erro {
+      color: #b91c1c;
+      text-align: center;
+      padding: 40px;
+    }
+  </style>
+
+  <script>
+    // ═══════════════════════════════════════════════════
+    // MODO IA — Análise inteligente dos dados da obra
+    // ═══════════════════════════════════════════════════
+
+    // Abre o modal com análise estática pré-gerada (portfólio)
+    async function abrirModalIA() {
+      const modal = document.getElementById('modal-ia');
+      if (modal) {
+        modal.style.display = 'flex';
+        const conteudo = document.getElementById('ia-conteudo');
+        if (conteudo) {
+          const analiseEstatica = `
+        <div style="background:#f9f3e8;border:1px solid #E8A020;border-radius:8px;padding:12px;margin-bottom:16px;font-size:0.78rem;color:#7a5a00;line-height:1.5">
+          ⚡ Esta análise é um <strong>exemplo de geração automática</strong> produzido pelo modelo <strong>Gemini 2.5 Pro</strong> (Google DeepMind). No sistema ao vivo, a IA analisa os dados reais da obra em tempo real a cada consulta, gerando um texto diferente conforme o status atual do projeto.
+        </div>
+        <h3 style="color:#8B1A1A;margin:0 0 8px;font-size:1rem">🤖 O que é a Análise Inteligente?</h3>
+        <p style="margin:0 0 12px;font-size:0.85rem;line-height:1.6">A <strong>Análise Inteligente</strong> é uma funcionalidade que coleta automaticamente todos os KPIs do projeto — IDP, progresso físico, desvios por trecho, ritmo de produção e ocorrências dos diários de obra — e envia esses dados para um modelo de linguagem (LLM) que gera um diagnóstico executivo contextualizado, identificando riscos, oportunidades e recomendações de ação.</p>
+        <hr style="border:none;border-top:1px solid #e5d8c0;margin:12px 0">
+        <h3 style="color:#8B1A1A;margin:0 0 8px;font-size:1rem">📊 Exemplo de Análise — Status Final (30/04/2026)</h3>
+        <p style="font-size:0.85rem;line-height:1.6">O Emissário Leão Dourado encerrou suas atividades de campo em <strong>30 de abril de 2026</strong> com <strong>102,5% de avanço físico médio</strong>, superando o planejado de 100,0%. O IDP Global de <strong>1,03</strong> indica execução ligeiramente adiantada ao cronograma de referência, resultado de um gerenciamento eficaz das frentes de serviço.</p>
+        <p style="font-size:0.85rem;line-height:1.6">Os três trechos foram concluídos dentro do prazo contratual (30/04/2026). O principal risco identificado durante a execução foi a <strong>incidência de rocha no Trecho 1</strong> (semana de 09/03/2026), mitigado com uso de massa expansiva e compressor, sem impacto no prazo final. A reposição asfáltica integral de 701m² foi concluída com sucesso na última semana de execução.</p>
+        <div style="background:#f0fff4;border:1px solid #86efac;border-radius:8px;padding:12px;margin-top:12px;font-size:0.82rem;color:#166534">
+          ✅ <strong>Recomendação da IA:</strong> Registrar as lições aprendidas desta obra — em especial as estratégias de gestão de imprevistos geotécnicos — como referência para projetos similares de infraestrutura urbana subterrânea.
+        </div>
+        <p style="font-size:0.72rem;color:#9ca3af;margin-top:16px;margin-bottom:0">🤖 Modelo: Gemini 2.5 Pro · Google DeepMind · Gerado em 30/04/2026</p>
+      `;
+          conteudo.innerHTML = analiseEstatica;
+        }
+      }
+    }
+
+    function fecharModalIA() {
+      document.getElementById('modal-ia').style.display = 'none';
+    }
+
+    // Fecha ao clicar fora do modal
+    document.getElementById('modal-ia').addEventListener('click', function (e) {
+      if (e.target === this) fecharModalIA();
+    });
+
+    // ── Coleta os dados da obra a partir das variáveis do dashboard ──
+    function coletarDadosObra() {
+      const ov = typeof overallKPIs === 'function' ? overallKPIs() : {};
+      const trechosResumo = TRECHOS.map(t => {
+        const k = typeof trechoKPIs === 'function' ? trechoKPIs(t) : {};
+        return {
+          nome: t.nome,
+          inicio: t.inicio,
+          fim: t.fim,
+          idp: k.idp ? k.idp.toFixed(2) : '—',
+          avancoReal: k.pA ? (k.pA * 100).toFixed(1) + '%' : '—',
+          avancoPrevisto: k.pP ? (k.pP * 100).toFixed(1) + '%' : '—',
+          projecaoConclusao: k.projEnd ? ptDate(k.projEnd) : '—',
+          metaDiariaATU: k.reqD ? k.reqD.toFixed(1) + ' ' + (k.atuUn || 'm') + '/dia' : '—',
+          mediaRealATU: k.avgD ? k.avgD.toFixed(1) + ' ' + (k.atuUn || 'm') + '/dia' : '—',
+          atividades: t.atividades.map(at => ({
+            nome: at.nome,
+            sigla: at.id,
+            unidade: at.un,
+            totalPrevisto: at.total,
+            totalRealizado: actualTotal(at.id),
+          })),
+        };
+      });
+
+      return {
+        dataAnalise: new Date().toLocaleDateString('pt-BR'),
+        prazoFinal: '30/04/2026',
+        diasUteisRestantes: ov.wdLeft,
+        progressoGeralMedio: ov.pA ? (ov.pA * 100).toFixed(1) + '%' : '—',
+        progressoAssentamento: ov.pA_atu ? (ov.pA_atu * 100).toFixed(1) + '%' : '—',
+        idpGlobal: ov.idp ? ov.idp.toFixed(2) : '—',
+        mediaAssentamentoReal: ov.atu_avg_real ? ov.atu_avg_real.toFixed(1) + ' m/dia' : '—',
+        mediaAssentamentoPlanejada: ov.atu_avg_plan ? ov.atu_avg_plan.toFixed(1) + ' m/dia' : '—',
+        simulacaoFim: ov.global_proj_end ? ptDate(ov.global_proj_end) : '—',
+        trechos: trechosResumo,
+      };
+    }
+
+    function markdownParaHTML(texto) {
+      if (!texto) return '';
+      return texto
+        .replace(/### (.+)/g, '<h3>$1</h3>')
+        .replace(/## (.+)/g, '<h3>$1</h3>')
+        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+        .replace(/^\* (.+)/gm, '<li>$1</li>')
+        .replace(/^- (.+)/gm, '<li>$1</li>')
+        .replace(/(<li>.*<\/li>)/gs, '<ul>$1</ul>')
+        .replace(/\n{2,}/g, '</p><p>')
+        .replace(/^(?!<[hul])(.+)/gm, '<p>$1</p>')
+        .replace(/<\/ul>\n<ul>/g, '')
+        .trim();
+    }
+
+    document.addEventListener('touchstart', function (e) {
+      if (!e.target.closest('.kpi')) {
+        document.querySelectorAll('.tooltip-box').forEach(b => b.style.display = 'none');
+        setTimeout(() => {
+          document.querySelectorAll('.tooltip-box').forEach(b => b.style.removeProperty('display'));
+        }, 300);
+      }
+    }, { passive: true });
+  </script>
+
+  <!-- TEMPLATE PDF (OCULTO) -->
+  <div id="pdf-render-area">
+    <div class="card-wrapper" id="pdf-tpl">
+      <!-- IMAGEM BASE -->
+      <img src="c.diario.png">
+
+      <!-- DATA -->
+      <div class="campo" id="pdf-date"></div>
+
+      <!-- PAINEL ESQUERDO — REMOÇÃO -->
+      <div class="campo" id="asfalto">0,0</div>
+      <div class="campo" id="granito">0,0</div>
+
+      <!-- CENTRO-ESQUERDO — ESCAVAÇÃO E SOLO -->
+      <div class="campo" id="escavacao">0,0</div>
+      <div class="campo" id="desmonte">0,0</div>
+
+      <!-- CENTRO-DIREITO — TUBOS E CONEXÕES -->
+      <div class="campo" id="tubo">0,0</div>
+      <div class="campo" id="pv">0,0</div>
+
+      <!-- PAINEL DIREITO — REATERRO -->
+      <div class="campo" id="reaterro">0,0</div>
+
+      <!-- RESUMO DE METAS -->
+      <div class="campo" id="resumo-asfalto">0,0 m²</div>
+      <div class="campo" id="resumo-tubo">0,0 m</div>
+      <div class="campo" id="resumo-solo">0,0 m³</div>
+    </div>
+  </div>
+</body>
+
+</html>
